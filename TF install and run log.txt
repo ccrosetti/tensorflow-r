@@ -1,0 +1,721 @@
+
+> library(keras)
+> install_keras(method = c("conda"),  conda = "auto", version = "default", tensorflow = "default",  extra_packages = c("tensorflow-hub"))
+Creating r-tensorflow conda environment for TensorFlow installation...
+WARNING: The conda.compat module is deprecated and will be removed in a future release.
+Collecting package metadata: ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.6.11
+  latest version: 4.6.14
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: C:\Users\Carlos\ANACON~1\envs\r-tensorflow
+
+  added / updated specs:
+    - python=3.7
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    openssl-1.1.1c             |       he774522_1         5.7 MB
+    pip-19.1.1                 |           py37_0         1.8 MB
+    python-3.7.3               |       h8c8aaf0_1        17.8 MB
+    setuptools-41.0.1          |           py37_0         680 KB
+    sqlite-3.28.0              |       he774522_0         945 KB
+    vs2015_runtime-14.15.26706 |       h3a45250_4         2.4 MB
+    wheel-0.33.4               |           py37_0          57 KB
+    ------------------------------------------------------------
+                                           Total:        29.3 MB
+
+The following NEW packages will be INSTALLED:
+
+  ca-certificates    pkgs/main/win-64::ca-certificates-2019.1.23-0
+  certifi            pkgs/main/win-64::certifi-2019.3.9-py37_0
+  openssl            pkgs/main/win-64::openssl-1.1.1c-he774522_1
+  pip                pkgs/main/win-64::pip-19.1.1-py37_0
+  python             pkgs/main/win-64::python-3.7.3-h8c8aaf0_1
+  setuptools         pkgs/main/win-64::setuptools-41.0.1-py37_0
+  sqlite             pkgs/main/win-64::sqlite-3.28.0-he774522_0
+  vc                 pkgs/main/win-64::vc-14.1-h0510ff6_4
+  vs2015_runtime     pkgs/main/win-64::vs2015_runtime-14.15.26706-h3a45250_4
+  wheel              pkgs/main/win-64::wheel-0.33.4-py37_0
+  wincertstore       pkgs/main/win-64::wincertstore-0.2-py37_0
+
+
+
+Downloading and Extracting Packages
+python-3.7.3         | 17.8 MB   |            |   0% python-3.7.3         | 17.8 MB   |            |   0% python-3.7.3         | 17.8 MB   |            |   1% python-3.7.3         | 17.8 MB   | 1          |   2% python-3.7.3         | 17.8 MB   | 2          |   2% python-3.7.3         | 17.8 MB   | 2          |   3% python-3.7.3         | 17.8 MB   | 3          |   3% python-3.7.3         | 17.8 MB   | 3          |   4% python-3.7.3         | 17.8 MB   | 4          |   4% python-3.7.3         | 17.8 MB   | 4          |   5% python-3.7.3         | 17.8 MB   | 5          |   5% python-3.7.3         | 17.8 MB   | 5          |   6% python-3.7.3         | 17.8 MB   | 6          |   6% python-3.7.3         | 17.8 MB   | 7          |   7% python-3.7.3         | 17.8 MB   | 7          |   8% python-3.7.3         | 17.8 MB   | 8          |   8% python-3.7.3         | 17.8 MB   | 8          |   9% python-3.7.3         | 17.8 MB   | 9          |   9% python-3.7.3         | 17.8 MB   | 9          |  10% python-3.7.3         | 17.8 MB   | #          |  10% python-3.7.3         | 17.8 MB   | #1         |  11% python-3.7.3         | 17.8 MB   | #1         |  12% python-3.7.3         | 17.8 MB   | #2         |  12% python-3.7.3         | 17.8 MB   | #2         |  13% python-3.7.3         | 17.8 MB   | #3         |  13% python-3.7.3         | 17.8 MB   | #3         |  14% python-3.7.3         | 17.8 MB   | #4         |  15% python-3.7.3         | 17.8 MB   | #5         |  15% python-3.7.3         | 17.8 MB   | #5         |  16% python-3.7.3         | 17.8 MB   | #6         |  16% python-3.7.3         | 17.8 MB   | #6         |  17% python-3.7.3         | 17.8 MB   | #7         |  17% python-3.7.3         | 17.8 MB   | #7         |  18% python-3.7.3         | 17.8 MB   | #8         |  18% python-3.7.3         | 17.8 MB   | #8         |  19% python-3.7.3         | 17.8 MB   | #9         |  20% python-3.7.3         | 17.8 MB   | ##         |  20% python-3.7.3         | 17.8 MB   | ##         |  21% python-3.7.3         | 17.8 MB   | ##1        |  21% python-3.7.3         | 17.8 MB   | ##1        |  22% python-3.7.3         | 17.8 MB   | ##2        |  23% python-3.7.3         | 17.8 MB   | ##3        |  23% python-3.7.3         | 17.8 MB   | ##3        |  24% python-3.7.3         | 17.8 MB   | ##4        |  24% python-3.7.3         | 17.8 MB   | ##4        |  25% python-3.7.3         | 17.8 MB   | ##5        |  26% python-3.7.3         | 17.8 MB   | ##6        |  26% python-3.7.3         | 17.8 MB   | ##6        |  27% python-3.7.3         | 17.8 MB   | ##7        |  27% python-3.7.3         | 17.8 MB   | ##8        |  28% python-3.7.3         | 17.8 MB   | ##8        |  29% python-3.7.3         | 17.8 MB   | ##9        |  29% python-3.7.3         | 17.8 MB   | ##9        |  30% python-3.7.3         | 17.8 MB   | ###        |  30% python-3.7.3         | 17.8 MB   | ###        |  31% python-3.7.3         | 17.8 MB   | ###1       |  32% python-3.7.3         | 17.8 MB   | ###2       |  32% python-3.7.3         | 17.8 MB   | ###2       |  33% python-3.7.3         | 17.8 MB   | ###3       |  33% python-3.7.3         | 17.8 MB   | ###3       |  34% python-3.7.3         | 17.8 MB   | ###4       |  34% python-3.7.3         | 17.8 MB   | ###4       |  35% python-3.7.3         | 17.8 MB   | ###5       |  36% python-3.7.3         | 17.8 MB   | ###6       |  36% python-3.7.3         | 17.8 MB   | ###6       |  37% python-3.7.3         | 17.8 MB   | ###7       |  37% python-3.7.3         | 17.8 MB   | ###7       |  38% python-3.7.3         | 17.8 MB   | ###8       |  39% python-3.7.3         | 17.8 MB   | ###9       |  39% python-3.7.3         | 17.8 MB   | ###9       |  40% python-3.7.3         | 17.8 MB   | ####       |  40% python-3.7.3         | 17.8 MB   | ####       |  41% python-3.7.3         | 17.8 MB   | ####1      |  41% python-3.7.3         | 17.8 MB   | ####2      |  42% python-3.7.3         | 17.8 MB   | ####2      |  43% python-3.7.3         | 17.8 MB   | ####3      |  43% python-3.7.3         | 17.8 MB   | ####3      |  44% python-3.7.3         | 17.8 MB   | ####4      |  44% python-3.7.3         | 17.8 MB   | ####5      |  45% python-3.7.3         | 17.8 MB   | ####5      |  46% python-3.7.3         | 17.8 MB   | ####6      |  46% python-3.7.3         | 17.8 MB   | ####6      |  47% python-3.7.3         | 17.8 MB   | ####7      |  47% python-3.7.3         | 17.8 MB   | ####8      |  48% python-3.7.3         | 17.8 MB   | ####8      |  49% python-3.7.3         | 17.8 MB   | ####9      |  49% python-3.7.3         | 17.8 MB   | ####9      |  50% python-3.7.3         | 17.8 MB   | #####      |  50% python-3.7.3         | 17.8 MB   | #####1     |  51% python-3.7.3         | 17.8 MB   | #####1     |  52% python-3.7.3         | 17.8 MB   | #####2     |  52% python-3.7.3         | 17.8 MB   | #####2     |  53% python-3.7.3         | 17.8 MB   | #####3     |  53% python-3.7.3         | 17.8 MB   | #####3     |  54% python-3.7.3         | 17.8 MB   | #####4     |  54% python-3.7.3         | 17.8 MB   | #####4     |  55% python-3.7.3         | 17.8 MB   | #####5     |  56% python-3.7.3         | 17.8 MB   | #####6     |  56% python-3.7.3         | 17.8 MB   | #####6     |  57% python-3.7.3         | 17.8 MB   | #####7     |  57% python-3.7.3         | 17.8 MB   | #####7     |  58% python-3.7.3         | 17.8 MB   | #####8     |  58% python-3.7.3         | 17.8 MB   | #####8     |  59% python-3.7.3         | 17.8 MB   | #####9     |  60% python-3.7.3         | 17.8 MB   | ######     |  60% python-3.7.3         | 17.8 MB   | ######     |  61% python-3.7.3         | 17.8 MB   | ######1    |  61% python-3.7.3         | 17.8 MB   | ######1    |  62% python-3.7.3         | 17.8 MB   | ######2    |  62% python-3.7.3         | 17.8 MB   | ######2    |  63% python-3.7.3         | 17.8 MB   | ######3    |  63% python-3.7.3         | 17.8 MB   | ######4    |  64% python-3.7.3         | 17.8 MB   | ######4    |  65% python-3.7.3         | 17.8 MB   | ######5    |  65% python-3.7.3         | 17.8 MB   | ######5    |  66% python-3.7.3         | 17.8 MB   | ######6    |  66% python-3.7.3         | 17.8 MB   | ######6    |  67% python-3.7.3         | 17.8 MB   | ######7    |  67% python-3.7.3         | 17.8 MB   | ######8    |  68% python-3.7.3         | 17.8 MB   | ######8    |  69% python-3.7.3         | 17.8 MB   | ######9    |  69% python-3.7.3         | 17.8 MB   | ######9    |  70% python-3.7.3         | 17.8 MB   | #######    |  70% python-3.7.3         | 17.8 MB   | #######    |  71% python-3.7.3         | 17.8 MB   | #######1   |  72% python-3.7.3         | 17.8 MB   | #######2   |  72% python-3.7.3         | 17.8 MB   | #######2   |  73% python-3.7.3         | 17.8 MB   | #######3   |  73% python-3.7.3         | 17.8 MB   | #######3   |  74% python-3.7.3         | 17.8 MB   | #######4   |  74% python-3.7.3         | 17.8 MB   | #######5   |  75% python-3.7.3         | 17.8 MB   | #######5   |  76% python-3.7.3         | 17.8 MB   | #######6   |  77% python-3.7.3         | 17.8 MB   | #######7   |  78% python-3.7.3         | 17.8 MB   | #######8   |  79% python-3.7.3         | 17.8 MB   | #######9   |  79% python-3.7.3         | 17.8 MB   | #######9   |  80% python-3.7.3         | 17.8 MB   | ########   |  81% python-3.7.3         | 17.8 MB   | ########1  |  81% python-3.7.3         | 17.8 MB   | ########2  |  82% python-3.7.3         | 17.8 MB   | ########3  |  83% python-3.7.3         | 17.8 MB   | ########4  |  85% python-3.7.3         | 17.8 MB   | ########5  |  85% python-3.7.3         | 17.8 MB   | ########6  |  87% python-3.7.3         | 17.8 MB   | ########7  |  88% python-3.7.3         | 17.8 MB   | ########8  |  89% python-3.7.3         | 17.8 MB   | ########9  |  90% python-3.7.3         | 17.8 MB   | #########  |  90% python-3.7.3         | 17.8 MB   | #########1 |  91% python-3.7.3         | 17.8 MB   | #########1 |  92% python-3.7.3         | 17.8 MB   | #########2 |  93% python-3.7.3         | 17.8 MB   | #########3 |  94% python-3.7.3         | 17.8 MB   | #########4 |  95% python-3.7.3         | 17.8 MB   | #########5 |  96% python-3.7.3         | 17.8 MB   | #########6 |  96% python-3.7.3         | 17.8 MB   | #########7 |  97% python-3.7.3         | 17.8 MB   | #########8 |  98% python-3.7.3         | 17.8 MB   | #########9 |  99% python-3.7.3         | 17.8 MB   | #########9 | 100% python-3.7.3         | 17.8 MB   | ########## | 100% 
+pip-19.1.1           | 1.8 MB    |            |   0% pip-19.1.1           | 1.8 MB    | 3          |   4% pip-19.1.1           | 1.8 MB    | 9          |  10% pip-19.1.1           | 1.8 MB    | #4         |  15% pip-19.1.1           | 1.8 MB    | ##         |  21% pip-19.1.1           | 1.8 MB    | ##5        |  26% pip-19.1.1           | 1.8 MB    | ###1       |  32% pip-19.1.1           | 1.8 MB    | ###6       |  36% pip-19.1.1           | 1.8 MB    | ####2      |  42% pip-19.1.1           | 1.8 MB    | ####7      |  47% pip-19.1.1           | 1.8 MB    | #####3     |  53% pip-19.1.1           | 1.8 MB    | #####8     |  58% pip-19.1.1           | 1.8 MB    | ######3    |  64% pip-19.1.1           | 1.8 MB    | ######8    |  69% pip-19.1.1           | 1.8 MB    | #######4   |  75% pip-19.1.1           | 1.8 MB    | #######9   |  79% pip-19.1.1           | 1.8 MB    | ########3  |  84% pip-19.1.1           | 1.8 MB    | ########9  |  89% pip-19.1.1           | 1.8 MB    | #########7 |  98% pip-19.1.1           | 1.8 MB    | ########## | 100% 
+setuptools-41.0.1    | 680 KB    |            |   0% setuptools-41.0.1    | 680 KB    | #          |  11% setuptools-41.0.1    | 680 KB    | ##4        |  25% setuptools-41.0.1    | 680 KB    | ####       |  41% setuptools-41.0.1    | 680 KB    | #####6     |  56% setuptools-41.0.1    | 680 KB    | #######2   |  72% setuptools-41.0.1    | 680 KB    | ########4  |  84% setuptools-41.0.1    | 680 KB    | #########9 | 100% setuptools-41.0.1    | 680 KB    | ########## | 100% 
+vs2015_runtime-14.15 | 2.4 MB    |            |   0% vs2015_runtime-14.15 | 2.4 MB    | 2          |   2% vs2015_runtime-14.15 | 2.4 MB    | 7          |   7% vs2015_runtime-14.15 | 2.4 MB    | #1         |  11% vs2015_runtime-14.15 | 2.4 MB    | #5         |  16% vs2015_runtime-14.15 | 2.4 MB    | #9         |  20% vs2015_runtime-14.15 | 2.4 MB    | ##3        |  24% vs2015_runtime-14.15 | 2.4 MB    | ##8        |  28% vs2015_runtime-14.15 | 2.4 MB    | ###2       |  32% vs2015_runtime-14.15 | 2.4 MB    | ###6       |  36% vs2015_runtime-14.15 | 2.4 MB    | ####       |  40% vs2015_runtime-14.15 | 2.4 MB    | ####4      |  45% vs2015_runtime-14.15 | 2.4 MB    | ####8      |  49% vs2015_runtime-14.15 | 2.4 MB    | #####3     |  53% vs2015_runtime-14.15 | 2.4 MB    | #####8     |  58% vs2015_runtime-14.15 | 2.4 MB    | ######2    |  62% vs2015_runtime-14.15 | 2.4 MB    | ######6    |  67% vs2015_runtime-14.15 | 2.4 MB    | #######    |  70% vs2015_runtime-14.15 | 2.4 MB    | #######4   |  74% vs2015_runtime-14.15 | 2.4 MB    | #######8   |  78% vs2015_runtime-14.15 | 2.4 MB    | ########3  |  84% vs2015_runtime-14.15 | 2.4 MB    | #########  |  90% vs2015_runtime-14.15 | 2.4 MB    | #########7 |  97% vs2015_runtime-14.15 | 2.4 MB    | ########## | 100% 
+wheel-0.33.4         | 57 KB     |            |   0% wheel-0.33.4         | 57 KB     | ########## | 100% 
+openssl-1.1.1c       | 5.7 MB    |            |   0% openssl-1.1.1c       | 5.7 MB    | 1          |   1% openssl-1.1.1c       | 5.7 MB    | 3          |   3% openssl-1.1.1c       | 5.7 MB    | 5          |   5% openssl-1.1.1c       | 5.7 MB    | 6          |   7% openssl-1.1.1c       | 5.7 MB    | 8          |   9% openssl-1.1.1c       | 5.7 MB    | #          |  11% openssl-1.1.1c       | 5.7 MB    | #2         |  12% openssl-1.1.1c       | 5.7 MB    | #4         |  14% openssl-1.1.1c       | 5.7 MB    | #5         |  16% openssl-1.1.1c       | 5.7 MB    | #7         |  18% openssl-1.1.1c       | 5.7 MB    | #9         |  20% openssl-1.1.1c       | 5.7 MB    | ##1        |  22% openssl-1.1.1c       | 5.7 MB    | ##3        |  23% openssl-1.1.1c       | 5.7 MB    | ##4        |  25% openssl-1.1.1c       | 5.7 MB    | ##6        |  27% openssl-1.1.1c       | 5.7 MB    | ##8        |  29% openssl-1.1.1c       | 5.7 MB    | ###        |  31% openssl-1.1.1c       | 5.7 MB    | ###2       |  32% openssl-1.1.1c       | 5.7 MB    | ###4       |  34% openssl-1.1.1c       | 5.7 MB    | ###6       |  36% openssl-1.1.1c       | 5.7 MB    | ###7       |  38% openssl-1.1.1c       | 5.7 MB    | ###9       |  40% openssl-1.1.1c       | 5.7 MB    | ####1      |  41% openssl-1.1.1c       | 5.7 MB    | ####3      |  43% openssl-1.1.1c       | 5.7 MB    | ####4      |  45% openssl-1.1.1c       | 5.7 MB    | ####6      |  47% openssl-1.1.1c       | 5.7 MB    | ####8      |  49% openssl-1.1.1c       | 5.7 MB    | #####      |  50% openssl-1.1.1c       | 5.7 MB    | #####2     |  52% openssl-1.1.1c       | 5.7 MB    | #####4     |  54% openssl-1.1.1c       | 5.7 MB    | #####5     |  56% openssl-1.1.1c       | 5.7 MB    | #####7     |  58% openssl-1.1.1c       | 5.7 MB    | #####9     |  60% openssl-1.1.1c       | 5.7 MB    | ######1    |  61% openssl-1.1.1c       | 5.7 MB    | ######3    |  63% openssl-1.1.1c       | 5.7 MB    | ######5    |  65% openssl-1.1.1c       | 5.7 MB    | ######6    |  67% openssl-1.1.1c       | 5.7 MB    | ######8    |  69% openssl-1.1.1c       | 5.7 MB    | #######    |  71% openssl-1.1.1c       | 5.7 MB    | #######2   |  72% openssl-1.1.1c       | 5.7 MB    | #######4   |  74% openssl-1.1.1c       | 5.7 MB    | #######6   |  76% openssl-1.1.1c       | 5.7 MB    | #######8   |  78% openssl-1.1.1c       | 5.7 MB    | ########1  |  81% openssl-1.1.1c       | 5.7 MB    | ########3  |  84% openssl-1.1.1c       | 5.7 MB    | ########6  |  87% openssl-1.1.1c       | 5.7 MB    | ########9  |  90% openssl-1.1.1c       | 5.7 MB    | #########2 |  92% openssl-1.1.1c       | 5.7 MB    | #########5 |  96% openssl-1.1.1c       | 5.7 MB    | #########8 |  99% openssl-1.1.1c       | 5.7 MB    | ########## | 100% 
+sqlite-3.28.0        | 945 KB    |            |   0% sqlite-3.28.0        | 945 KB    | 7          |   8% sqlite-3.28.0        | 945 KB    | #9         |  19% sqlite-3.28.0        | 945 KB    | ##9        |  29% sqlite-3.28.0        | 945 KB    | ####1      |  42% sqlite-3.28.0        | 945 KB    | #####3     |  53% sqlite-3.28.0        | 945 KB    | ######4    |  65% sqlite-3.28.0        | 945 KB    | #######5   |  75% sqlite-3.28.0        | 945 KB    | #########2 |  93% sqlite-3.28.0        | 945 KB    | ########## | 100% 
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+#
+# To activate this environment, use:
+# > activate r-tensorflow
+#
+# To deactivate an active environment, use:
+# > deactivate
+#
+# * for power-users using bash, you must source
+#
+
+WARNING: The conda.compat module is deprecated and will be removed in a future release.
+Collecting package metadata: ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.6.11
+  latest version: 4.6.14
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: C:\Users\Carlos\ANACON~1\envs\r-tensorflow
+
+  added / updated specs:
+    - h5py
+    - keras
+    - pillow
+    - pyyaml
+    - requests
+    - scipy
+    - tensorflow-hub
+    - tensorflow-probability
+    - tensorflow==1.13.1
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    _tflow_select-2.3.0        |              mkl           3 KB
+    absl-py-0.7.1              |           py37_0         154 KB  conda-forge
+    asn1crypto-0.24.0          |        py37_1003         154 KB  conda-forge
+    astor-0.7.1                |             py_0          22 KB  conda-forge
+    ca-certificates-2019.3.9   |       hecc5488_0         184 KB  conda-forge
+    certifi-2019.3.9           |           py37_0         149 KB  conda-forge
+    cffi-1.12.3                |   py37hb32ad35_0         219 KB  conda-forge
+    chardet-3.0.4              |        py37_1003         184 KB  conda-forge
+    cryptography-2.6.1         |   py37hb32ad35_0         558 KB  conda-forge
+    freetype-2.10.0            |       h5db478b_0         478 KB  conda-forge
+    gast-0.2.2                 |             py_0          10 KB  conda-forge
+    grpcio-1.16.1              |   py37h351948d_1         947 KB
+    h5py-2.9.0                 |nompi_py37h3cb27cb_1102         905 KB  conda-forge
+    hdf5-1.10.4                |nompi_hcc15c50_1106        34.9 MB  conda-forge
+    idna-2.8                   |        py37_1000         100 KB  conda-forge
+    jpeg-9c                    |    hfa6e2cd_1001         314 KB  conda-forge
+    keras-2.2.4                |           py37_1         492 KB  conda-forge
+    keras-applications-1.0.7   |             py_1          31 KB  conda-forge
+    keras-preprocessing-1.0.9  |             py_1          33 KB  conda-forge
+    libblas-3.8.0              |           10_mkl         3.5 MB  conda-forge
+    libcblas-3.8.0             |           10_mkl         3.5 MB  conda-forge
+    libgpuarray-0.7.6          |    hfa6e2cd_1003         314 KB  conda-forge
+    liblapack-3.8.0            |           10_mkl         3.5 MB  conda-forge
+    libmklml-2019.0.3          |                0        21.4 MB
+    libpng-1.6.37              |       h7602738_0         1.3 MB  conda-forge
+    libprotobuf-3.7.1          |       h1a1b453_0         2.1 MB  conda-forge
+    libtiff-4.0.10             |    h36446d0_1001         1.0 MB  conda-forge
+    mako-1.0.10                |             py_0          59 KB  conda-forge
+    markdown-2.6.11            |             py_0          56 KB  conda-forge
+    markupsafe-1.1.1           |   py37hfa6e2cd_0          28 KB  conda-forge
+    numpy-1.16.3               |   py37h873a0b8_0         4.0 MB  conda-forge
+    olefile-0.46               |             py_0          31 KB  conda-forge
+    openssl-1.1.1b             |       hfa6e2cd_2         4.8 MB  conda-forge
+    pillow-6.0.0               |   py37h9a613e6_0         684 KB  conda-forge
+    protobuf-3.7.1             |   py37he025d50_0         536 KB  conda-forge
+    pycparser-2.19             |           py37_1         171 KB  conda-forge
+    pygpu-0.7.6                |py37h452e1ab_1000         583 KB  conda-forge
+    pyopenssl-19.0.0           |           py37_0          81 KB  conda-forge
+    pyreadline-2.1             |        py37_1000         140 KB  conda-forge
+    pysocks-1.7.0              |           py37_0          26 KB  conda-forge
+    pyyaml-5.1                 |   py37hfa6e2cd_0         154 KB  conda-forge
+    requests-2.22.0            |           py37_0          84 KB  conda-forge
+    six-1.12.0                 |        py37_1000          21 KB  conda-forge
+    tensorboard-1.13.1         |           py37_0         3.3 MB  conda-forge
+    tensorflow-1.13.1          |mkl_py37h9463c59_0           4 KB
+    tensorflow-base-1.13.1     |mkl_py37hcaf7020_0        49.4 MB
+    tensorflow-estimator-1.13.0|   py37h39e3cac_0         470 KB  conda-forge
+    tensorflow-hub-0.4.0       |             py_0          52 KB  conda-forge
+    tensorflow-probability-0.5.0|             py_1         627 KB  conda-forge
+    termcolor-1.1.0            |             py_2           6 KB  conda-forge
+    theano-1.0.4               |py37h6538335_1000         3.7 MB  conda-forge
+    tk-8.6.9                   |    hfa6e2cd_1001         3.7 MB  conda-forge
+    urllib3-1.24.3             |           py37_0         151 KB  conda-forge
+    vs2015_win-64-14.0.25420   |      h55c1224_10           6 KB
+    werkzeug-0.15.4            |             py_0         254 KB  conda-forge
+    win_inet_pton-1.1.0        |           py37_0           7 KB  conda-forge
+    yaml-0.1.7                 |    hfa6e2cd_1001         221 KB  conda-forge
+    zlib-1.2.11                |    h2fa13f4_1004         236 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:       149.9 MB
+
+The following NEW packages will be INSTALLED:
+
+  _tflow_select      pkgs/main/win-64::_tflow_select-2.3.0-mkl
+  absl-py            conda-forge/win-64::absl-py-0.7.1-py37_0
+  asn1crypto         conda-forge/win-64::asn1crypto-0.24.0-py37_1003
+  astor              conda-forge/noarch::astor-0.7.1-py_0
+  blas               pkgs/main/win-64::blas-1.0-mkl
+  cffi               conda-forge/win-64::cffi-1.12.3-py37hb32ad35_0
+  chardet            conda-forge/win-64::chardet-3.0.4-py37_1003
+  cryptography       conda-forge/win-64::cryptography-2.6.1-py37hb32ad35_0
+  freetype           conda-forge/win-64::freetype-2.10.0-h5db478b_0
+  gast               conda-forge/noarch::gast-0.2.2-py_0
+  grpcio             pkgs/main/win-64::grpcio-1.16.1-py37h351948d_1
+  h5py               conda-forge/win-64::h5py-2.9.0-nompi_py37h3cb27cb_1102
+  hdf5               conda-forge/win-64::hdf5-1.10.4-nompi_hcc15c50_1106
+  icc_rt             pkgs/main/win-64::icc_rt-2019.0.0-h0cc432a_1
+  idna               conda-forge/win-64::idna-2.8-py37_1000
+  intel-openmp       pkgs/main/win-64::intel-openmp-2019.3-203
+  jpeg               conda-forge/win-64::jpeg-9c-hfa6e2cd_1001
+  keras              conda-forge/win-64::keras-2.2.4-py37_1
+  keras-applications conda-forge/noarch::keras-applications-1.0.7-py_1
+  keras-preprocessi~ conda-forge/noarch::keras-preprocessing-1.0.9-py_1
+  libblas            conda-forge/win-64::libblas-3.8.0-10_mkl
+  libcblas           conda-forge/win-64::libcblas-3.8.0-10_mkl
+  libgpuarray        conda-forge/win-64::libgpuarray-0.7.6-hfa6e2cd_1003
+  liblapack          conda-forge/win-64::liblapack-3.8.0-10_mkl
+  libmklml           pkgs/main/win-64::libmklml-2019.0.3-0
+  libpng             conda-forge/win-64::libpng-1.6.37-h7602738_0
+  libprotobuf        conda-forge/win-64::libprotobuf-3.7.1-h1a1b453_0
+  libtiff            conda-forge/win-64::libtiff-4.0.10-h36446d0_1001
+  mako               conda-forge/noarch::mako-1.0.10-py_0
+  markdown           conda-forge/noarch::markdown-2.6.11-py_0
+  markupsafe         conda-forge/win-64::markupsafe-1.1.1-py37hfa6e2cd_0
+  mkl                pkgs/main/win-64::mkl-2019.3-203
+  numpy              conda-forge/win-64::numpy-1.16.3-py37h873a0b8_0
+  olefile            conda-forge/noarch::olefile-0.46-py_0
+  pillow             conda-forge/win-64::pillow-6.0.0-py37h9a613e6_0
+  protobuf           conda-forge/win-64::protobuf-3.7.1-py37he025d50_0
+  pycparser          conda-forge/win-64::pycparser-2.19-py37_1
+  pygpu              conda-forge/win-64::pygpu-0.7.6-py37h452e1ab_1000
+  pyopenssl          conda-forge/win-64::pyopenssl-19.0.0-py37_0
+  pyreadline         conda-forge/win-64::pyreadline-2.1-py37_1000
+  pysocks            conda-forge/win-64::pysocks-1.7.0-py37_0
+  pyyaml             conda-forge/win-64::pyyaml-5.1-py37hfa6e2cd_0
+  requests           conda-forge/win-64::requests-2.22.0-py37_0
+  scipy              pkgs/main/win-64::scipy-1.2.1-py37h29ff71c_0
+  six                conda-forge/win-64::six-1.12.0-py37_1000
+  tensorboard        conda-forge/win-64::tensorboard-1.13.1-py37_0
+  tensorflow         pkgs/main/win-64::tensorflow-1.13.1-mkl_py37h9463c59_0
+  tensorflow-base    pkgs/main/win-64::tensorflow-base-1.13.1-mkl_py37hcaf7020_0
+  tensorflow-estima~ conda-forge/win-64::tensorflow-estimator-1.13.0-py37h39e3cac_0
+  tensorflow-hub     conda-forge/noarch::tensorflow-hub-0.4.0-py_0
+  tensorflow-probab~ conda-forge/noarch::tensorflow-probability-0.5.0-py_1
+  termcolor          conda-forge/noarch::termcolor-1.1.0-py_2
+  theano             conda-forge/win-64::theano-1.0.4-py37h6538335_1000
+  tk                 conda-forge/win-64::tk-8.6.9-hfa6e2cd_1001
+  urllib3            conda-forge/win-64::urllib3-1.24.3-py37_0
+  vs2015_win-64      pkgs/main/win-64::vs2015_win-64-14.0.25420-h55c1224_10
+  werkzeug           conda-forge/noarch::werkzeug-0.15.4-py_0
+  win_inet_pton      conda-forge/win-64::win_inet_pton-1.1.0-py37_0
+  yaml               conda-forge/win-64::yaml-0.1.7-hfa6e2cd_1001
+  zlib               conda-forge/win-64::zlib-1.2.11-h2fa13f4_1004
+
+The following packages will be UPDATED:
+
+  ca-certificates    pkgs/main::ca-certificates-2019.1.23-0 --> conda-forge::ca-certificates-2019.3.9-hecc5488_0
+
+The following packages will be SUPERSEDED by a higher-priority channel:
+
+  certifi                                         pkgs/main --> conda-forge
+  openssl              pkgs/main::openssl-1.1.1c-he774522_1 --> conda-forge::openssl-1.1.1b-hfa6e2cd_2
+
+
+
+Downloading and Extracting Packages
+jpeg-9c              | 314 KB    |            |   0% jpeg-9c              | 314 KB    | #9         |  19% jpeg-9c              | 314 KB    | #####3     |  54% jpeg-9c              | 314 KB    | #######5   |  75% jpeg-9c              | 314 KB    | ########## | 100% 
+libpng-1.6.37        | 1.3 MB    |            |   0% libpng-1.6.37        | 1.3 MB    |            |   1% libpng-1.6.37        | 1.3 MB    | 8          |   8% libpng-1.6.37        | 1.3 MB    | #6         |  16% libpng-1.6.37        | 1.3 MB    | ##5        |  25% libpng-1.6.37        | 1.3 MB    | ###1       |  31% libpng-1.6.37        | 1.3 MB    | ###9       |  39% libpng-1.6.37        | 1.3 MB    | ####6      |  47% libpng-1.6.37        | 1.3 MB    | #####4     |  55% libpng-1.6.37        | 1.3 MB    | ######3    |  64% libpng-1.6.37        | 1.3 MB    | #######1   |  72% libpng-1.6.37        | 1.3 MB    | #######9   |  79% libpng-1.6.37        | 1.3 MB    | ########6  |  86% libpng-1.6.37        | 1.3 MB    | #########3 |  94% libpng-1.6.37        | 1.3 MB    | ########## | 100% 
+astor-0.7.1          | 22 KB     |            |   0% astor-0.7.1          | 22 KB     | #####5     |  56% astor-0.7.1          | 22 KB     | #######5   |  75% astor-0.7.1          | 22 KB     | ########## | 100% 
+idna-2.8             | 100 KB    |            |   0% idna-2.8             | 100 KB    | #2         |  12% idna-2.8             | 100 KB    | ########## | 100% 
+ca-certificates-2019 | 184 KB    |            |   0% ca-certificates-2019 | 184 KB    | 6          |   7% ca-certificates-2019 | 184 KB    | ########## | 100% 
+tk-8.6.9             | 3.7 MB    |            |   0% tk-8.6.9             | 3.7 MB    | 1          |   2% tk-8.6.9             | 3.7 MB    | 4          |   5% tk-8.6.9             | 3.7 MB    | 7          |   8% tk-8.6.9             | 3.7 MB    | #          |  10% tk-8.6.9             | 3.7 MB    | #2         |  13% tk-8.6.9             | 3.7 MB    | #5         |  16% tk-8.6.9             | 3.7 MB    | #8         |  19% tk-8.6.9             | 3.7 MB    | ##1        |  21% tk-8.6.9             | 3.7 MB    | ##4        |  24% tk-8.6.9             | 3.7 MB    | ##6        |  27% tk-8.6.9             | 3.7 MB    | ##9        |  29% tk-8.6.9             | 3.7 MB    | ###2       |  32% tk-8.6.9             | 3.7 MB    | ###4       |  35% tk-8.6.9             | 3.7 MB    | ###7       |  37% tk-8.6.9             | 3.7 MB    | ####       |  40% tk-8.6.9             | 3.7 MB    | ####3      |  43% tk-8.6.9             | 3.7 MB    | ####6      |  46% tk-8.6.9             | 3.7 MB    | ####8      |  49% tk-8.6.9             | 3.7 MB    | #####1     |  52% tk-8.6.9             | 3.7 MB    | #####4     |  55% tk-8.6.9             | 3.7 MB    | #####7     |  57% tk-8.6.9             | 3.7 MB    | ######     |  60% tk-8.6.9             | 3.7 MB    | ######2    |  63% tk-8.6.9             | 3.7 MB    | ######5    |  65% tk-8.6.9             | 3.7 MB    | ######8    |  68% tk-8.6.9             | 3.7 MB    | #######1   |  71% tk-8.6.9             | 3.7 MB    | #######3   |  74% tk-8.6.9             | 3.7 MB    | #######6   |  77% tk-8.6.9             | 3.7 MB    | #######9   |  79% tk-8.6.9             | 3.7 MB    | ########1  |  81% tk-8.6.9             | 3.7 MB    | ########4  |  85% tk-8.6.9             | 3.7 MB    | ########9  |  89% tk-8.6.9             | 3.7 MB    | #########4 |  95% tk-8.6.9             | 3.7 MB    | #########9 | 100% tk-8.6.9             | 3.7 MB    | ########## | 100% 
+libblas-3.8.0        | 3.5 MB    |            |   0% libblas-3.8.0        | 3.5 MB    | 2          |   3% libblas-3.8.0        | 3.5 MB    | 5          |   5% libblas-3.8.0        | 3.5 MB    | 8          |   8% libblas-3.8.0        | 3.5 MB    | #1         |  11% libblas-3.8.0        | 3.5 MB    | #4         |  14% libblas-3.8.0        | 3.5 MB    | #7         |  17% libblas-3.8.0        | 3.5 MB    | ##         |  20% libblas-3.8.0        | 3.5 MB    | ##3        |  23% libblas-3.8.0        | 3.5 MB    | ##5        |  26% libblas-3.8.0        | 3.5 MB    | ##8        |  28% libblas-3.8.0        | 3.5 MB    | ###1       |  31% libblas-3.8.0        | 3.5 MB    | ###4       |  34% libblas-3.8.0        | 3.5 MB    | ###7       |  37% libblas-3.8.0        | 3.5 MB    | ####       |  40% libblas-3.8.0        | 3.5 MB    | ####3      |  43% libblas-3.8.0        | 3.5 MB    | ####5      |  46% libblas-3.8.0        | 3.5 MB    | ####9      |  49% libblas-3.8.0        | 3.5 MB    | #####2     |  52% libblas-3.8.0        | 3.5 MB    | #####5     |  55% libblas-3.8.0        | 3.5 MB    | #####8     |  59% libblas-3.8.0        | 3.5 MB    | ######1    |  62% libblas-3.8.0        | 3.5 MB    | ######4    |  65% libblas-3.8.0        | 3.5 MB    | ######7    |  67% libblas-3.8.0        | 3.5 MB    | #######    |  70% libblas-3.8.0        | 3.5 MB    | #######3   |  73% libblas-3.8.0        | 3.5 MB    | #######5   |  76% libblas-3.8.0        | 3.5 MB    | #######9   |  80% libblas-3.8.0        | 3.5 MB    | ########2  |  83% libblas-3.8.0        | 3.5 MB    | ########5  |  85% libblas-3.8.0        | 3.5 MB    | ########9  |  90% libblas-3.8.0        | 3.5 MB    | #########3 |  93% libblas-3.8.0        | 3.5 MB    | #########7 |  97% libblas-3.8.0        | 3.5 MB    | ########## | 100% 
+pillow-6.0.0         | 684 KB    |            |   0% pillow-6.0.0         | 684 KB    | 8          |   9% pillow-6.0.0         | 684 KB    | ##2        |  23% pillow-6.0.0         | 684 KB    | ####       |  40% pillow-6.0.0         | 684 KB    | #####6     |  56% pillow-6.0.0         | 684 KB    | #######1   |  72% pillow-6.0.0         | 684 KB    | ########3  |  83% pillow-6.0.0         | 684 KB    | ########## | 100% 
+pyyaml-5.1           | 154 KB    |            |   0% pyyaml-5.1           | 154 KB    | ###8       |  39% pyyaml-5.1           | 154 KB    | ########## | 100% 
+keras-preprocessing- | 33 KB     |            |   0% keras-preprocessing- | 33 KB     | ########## | 100% 
+pyopenssl-19.0.0     | 81 KB     |            |   0% pyopenssl-19.0.0     | 81 KB     | #4         |  15% pyopenssl-19.0.0     | 81 KB     | ########## | 100% 
+tensorboard-1.13.1   | 3.3 MB    |            |   0% tensorboard-1.13.1   | 3.3 MB    | 2          |   2% tensorboard-1.13.1   | 3.3 MB    | 5          |   5% tensorboard-1.13.1   | 3.3 MB    | 8          |   9% tensorboard-1.13.1   | 3.3 MB    | #1         |  12% tensorboard-1.13.1   | 3.3 MB    | #4         |  15% tensorboard-1.13.1   | 3.3 MB    | #8         |  18% tensorboard-1.13.1   | 3.3 MB    | ##1        |  21% tensorboard-1.13.1   | 3.3 MB    | ##4        |  25% tensorboard-1.13.1   | 3.3 MB    | ##7        |  28% tensorboard-1.13.1   | 3.3 MB    | ###        |  31% tensorboard-1.13.1   | 3.3 MB    | ###3       |  34% tensorboard-1.13.1   | 3.3 MB    | ###7       |  37% tensorboard-1.13.1   | 3.3 MB    | ####       |  41% tensorboard-1.13.1   | 3.3 MB    | ####4      |  44% tensorboard-1.13.1   | 3.3 MB    | ####7      |  47% tensorboard-1.13.1   | 3.3 MB    | #####      |  51% tensorboard-1.13.1   | 3.3 MB    | #####3     |  54% tensorboard-1.13.1   | 3.3 MB    | #####7     |  57% tensorboard-1.13.1   | 3.3 MB    | ######     |  61% tensorboard-1.13.1   | 3.3 MB    | ######3    |  64% tensorboard-1.13.1   | 3.3 MB    | ######6    |  67% tensorboard-1.13.1   | 3.3 MB    | #######    |  70% tensorboard-1.13.1   | 3.3 MB    | #######3   |  73% tensorboard-1.13.1   | 3.3 MB    | #######6   |  76% tensorboard-1.13.1   | 3.3 MB    | #######8   |  79% tensorboard-1.13.1   | 3.3 MB    | ########2  |  83% tensorboard-1.13.1   | 3.3 MB    | #########1 |  92% tensorboard-1.13.1   | 3.3 MB    | #########9 |  99% tensorboard-1.13.1   | 3.3 MB    | ########## | 100% 
+libprotobuf-3.7.1    | 2.1 MB    |            |   0% libprotobuf-3.7.1    | 2.1 MB    | 3          |   3% libprotobuf-3.7.1    | 2.1 MB    | 7          |   8% libprotobuf-3.7.1    | 2.1 MB    | #2         |  13% libprotobuf-3.7.1    | 2.1 MB    | #7         |  18% libprotobuf-3.7.1    | 2.1 MB    | ##2        |  22% libprotobuf-3.7.1    | 2.1 MB    | ##7        |  27% libprotobuf-3.7.1    | 2.1 MB    | ###1       |  32% libprotobuf-3.7.1    | 2.1 MB    | ###6       |  36% libprotobuf-3.7.1    | 2.1 MB    | ####       |  41% libprotobuf-3.7.1    | 2.1 MB    | ####4      |  45% libprotobuf-3.7.1    | 2.1 MB    | ####9      |  50% libprotobuf-3.7.1    | 2.1 MB    | #####4     |  55% libprotobuf-3.7.1    | 2.1 MB    | #####9     |  59% libprotobuf-3.7.1    | 2.1 MB    | ######3    |  64% libprotobuf-3.7.1    | 2.1 MB    | ######7    |  68% libprotobuf-3.7.1    | 2.1 MB    | #######2   |  73% libprotobuf-3.7.1    | 2.1 MB    | #######7   |  77% libprotobuf-3.7.1    | 2.1 MB    | ########2  |  82% libprotobuf-3.7.1    | 2.1 MB    | ########8  |  89% libprotobuf-3.7.1    | 2.1 MB    | #########5 |  96% libprotobuf-3.7.1    | 2.1 MB    | ########## | 100% 
+certifi-2019.3.9     | 149 KB    |            |   0% certifi-2019.3.9     | 149 KB    | 8          |   8% certifi-2019.3.9     | 149 KB    | ########## | 100% 
+protobuf-3.7.1       | 536 KB    |            |   0% protobuf-3.7.1       | 536 KB    | #3         |  13% protobuf-3.7.1       | 536 KB    | ###1       |  31% protobuf-3.7.1       | 536 KB    | #####3     |  54% protobuf-3.7.1       | 536 KB    | #######1   |  72% protobuf-3.7.1       | 536 KB    | ########9  |  90% protobuf-3.7.1       | 536 KB    | ########## | 100% 
+chardet-3.0.4        | 184 KB    |            |   0% chardet-3.0.4        | 184 KB    | ###2       |  33% chardet-3.0.4        | 184 KB    | ########## | 100% 
+gast-0.2.2           | 10 KB     |            |   0% gast-0.2.2           | 10 KB     | #######5   |  75% gast-0.2.2           | 10 KB     | ########## | 100% 
+cryptography-2.6.1   | 558 KB    |            |   0% cryptography-2.6.1   | 558 KB    | 2          |   2% cryptography-2.6.1   | 558 KB    | #9         |  19% cryptography-2.6.1   | 558 KB    | ####       |  41% cryptography-2.6.1   | 558 KB    | #####8     |  58% cryptography-2.6.1   | 558 KB    | #######5   |  75% cryptography-2.6.1   | 558 KB    | #########1 |  92% cryptography-2.6.1   | 558 KB    | ########## | 100% 
+termcolor-1.1.0      | 6 KB      |            |   0% termcolor-1.1.0      | 6 KB      | #######5   |  75% termcolor-1.1.0      | 6 KB      | ########## | 100% 
+libmklml-2019.0.3    | 21.4 MB   |            |   0% libmklml-2019.0.3    | 21.4 MB   |            |   0% libmklml-2019.0.3    | 21.4 MB   |            |   1% libmklml-2019.0.3    | 21.4 MB   | 1          |   1% libmklml-2019.0.3    | 21.4 MB   | 1          |   2% libmklml-2019.0.3    | 21.4 MB   | 2          |   2% libmklml-2019.0.3    | 21.4 MB   | 2          |   3% libmklml-2019.0.3    | 21.4 MB   | 3          |   3% libmklml-2019.0.3    | 21.4 MB   | 3          |   4% libmklml-2019.0.3    | 21.4 MB   | 4          |   4% libmklml-2019.0.3    | 21.4 MB   | 4          |   5% libmklml-2019.0.3    | 21.4 MB   | 5          |   5% libmklml-2019.0.3    | 21.4 MB   | 5          |   6% libmklml-2019.0.3    | 21.4 MB   | 6          |   6% libmklml-2019.0.3    | 21.4 MB   | 6          |   7% libmklml-2019.0.3    | 21.4 MB   | 7          |   7% libmklml-2019.0.3    | 21.4 MB   | 7          |   8% libmklml-2019.0.3    | 21.4 MB   | 8          |   8% libmklml-2019.0.3    | 21.4 MB   | 8          |   9% libmklml-2019.0.3    | 21.4 MB   | 9          |   9% libmklml-2019.0.3    | 21.4 MB   | 9          |  10% libmklml-2019.0.3    | 21.4 MB   | #          |  10% libmklml-2019.0.3    | 21.4 MB   | #          |  10% libmklml-2019.0.3    | 21.4 MB   | #1         |  11% libmklml-2019.0.3    | 21.4 MB   | #1         |  11% libmklml-2019.0.3    | 21.4 MB   | #1         |  12% libmklml-2019.0.3    | 21.4 MB   | #2         |  12% libmklml-2019.0.3    | 21.4 MB   | #2         |  13% libmklml-2019.0.3    | 21.4 MB   | #3         |  13% libmklml-2019.0.3    | 21.4 MB   | #3         |  14% libmklml-2019.0.3    | 21.4 MB   | #4         |  14% libmklml-2019.0.3    | 21.4 MB   | #4         |  15% libmklml-2019.0.3    | 21.4 MB   | #5         |  15% libmklml-2019.0.3    | 21.4 MB   | #5         |  16% libmklml-2019.0.3    | 21.4 MB   | #6         |  16% libmklml-2019.0.3    | 21.4 MB   | #6         |  17% libmklml-2019.0.3    | 21.4 MB   | #7         |  17% libmklml-2019.0.3    | 21.4 MB   | #7         |  18% libmklml-2019.0.3    | 21.4 MB   | #8         |  18% libmklml-2019.0.3    | 21.4 MB   | #8         |  19% libmklml-2019.0.3    | 21.4 MB   | #9         |  19% libmklml-2019.0.3    | 21.4 MB   | #9         |  19% libmklml-2019.0.3    | 21.4 MB   | #9         |  20% libmklml-2019.0.3    | 21.4 MB   | ##         |  20% libmklml-2019.0.3    | 21.4 MB   | ##         |  21% libmklml-2019.0.3    | 21.4 MB   | ##1        |  21% libmklml-2019.0.3    | 21.4 MB   | ##1        |  22% libmklml-2019.0.3    | 21.4 MB   | ##2        |  22% libmklml-2019.0.3    | 21.4 MB   | ##2        |  23% libmklml-2019.0.3    | 21.4 MB   | ##3        |  23% libmklml-2019.0.3    | 21.4 MB   | ##3        |  24% libmklml-2019.0.3    | 21.4 MB   | ##4        |  24% libmklml-2019.0.3    | 21.4 MB   | ##4        |  25% libmklml-2019.0.3    | 21.4 MB   | ##5        |  25% libmklml-2019.0.3    | 21.4 MB   | ##5        |  26% libmklml-2019.0.3    | 21.4 MB   | ##6        |  26% libmklml-2019.0.3    | 21.4 MB   | ##6        |  27% libmklml-2019.0.3    | 21.4 MB   | ##7        |  27% libmklml-2019.0.3    | 21.4 MB   | ##7        |  28% libmklml-2019.0.3    | 21.4 MB   | ##8        |  28% libmklml-2019.0.3    | 21.4 MB   | ##8        |  29% libmklml-2019.0.3    | 21.4 MB   | ##9        |  29% libmklml-2019.0.3    | 21.4 MB   | ##9        |  30% libmklml-2019.0.3    | 21.4 MB   | ###        |  30% libmklml-2019.0.3    | 21.4 MB   | ###        |  31% libmklml-2019.0.3    | 21.4 MB   | ###1       |  31% libmklml-2019.0.3    | 21.4 MB   | ###1       |  32% libmklml-2019.0.3    | 21.4 MB   | ###2       |  32% libmklml-2019.0.3    | 21.4 MB   | ###2       |  33% libmklml-2019.0.3    | 21.4 MB   | ###3       |  33% libmklml-2019.0.3    | 21.4 MB   | ###3       |  34% libmklml-2019.0.3    | 21.4 MB   | ###4       |  34% libmklml-2019.0.3    | 21.4 MB   | ###4       |  34% libmklml-2019.0.3    | 21.4 MB   | ###4       |  35% libmklml-2019.0.3    | 21.4 MB   | ###5       |  35% libmklml-2019.0.3    | 21.4 MB   | ###5       |  36% libmklml-2019.0.3    | 21.4 MB   | ###6       |  36% libmklml-2019.0.3    | 21.4 MB   | ###6       |  37% libmklml-2019.0.3    | 21.4 MB   | ###7       |  37% libmklml-2019.0.3    | 21.4 MB   | ###7       |  38% libmklml-2019.0.3    | 21.4 MB   | ###8       |  38% libmklml-2019.0.3    | 21.4 MB   | ###8       |  39% libmklml-2019.0.3    | 21.4 MB   | ###9       |  39% libmklml-2019.0.3    | 21.4 MB   | ###9       |  40% libmklml-2019.0.3    | 21.4 MB   | ####       |  40% libmklml-2019.0.3    | 21.4 MB   | ####       |  41% libmklml-2019.0.3    | 21.4 MB   | ####1      |  41% libmklml-2019.0.3    | 21.4 MB   | ####1      |  42% libmklml-2019.0.3    | 21.4 MB   | ####2      |  42% libmklml-2019.0.3    | 21.4 MB   | ####2      |  43% libmklml-2019.0.3    | 21.4 MB   | ####3      |  43% libmklml-2019.0.3    | 21.4 MB   | ####3      |  44% libmklml-2019.0.3    | 21.4 MB   | ####4      |  44% libmklml-2019.0.3    | 21.4 MB   | ####4      |  45% libmklml-2019.0.3    | 21.4 MB   | ####5      |  45% libmklml-2019.0.3    | 21.4 MB   | ####5      |  46% libmklml-2019.0.3    | 21.4 MB   | ####6      |  46% libmklml-2019.0.3    | 21.4 MB   | ####6      |  46% libmklml-2019.0.3    | 21.4 MB   | ####6      |  47% libmklml-2019.0.3    | 21.4 MB   | ####7      |  47% libmklml-2019.0.3    | 21.4 MB   | ####7      |  48% libmklml-2019.0.3    | 21.4 MB   | ####8      |  48% libmklml-2019.0.3    | 21.4 MB   | ####8      |  49% libmklml-2019.0.3    | 21.4 MB   | ####9      |  49% libmklml-2019.0.3    | 21.4 MB   | ####9      |  50% libmklml-2019.0.3    | 21.4 MB   | #####      |  50% libmklml-2019.0.3    | 21.4 MB   | #####      |  51% libmklml-2019.0.3    | 21.4 MB   | #####1     |  51% libmklml-2019.0.3    | 21.4 MB   | #####1     |  52% libmklml-2019.0.3    | 21.4 MB   | #####2     |  52% libmklml-2019.0.3    | 21.4 MB   | #####2     |  53% libmklml-2019.0.3    | 21.4 MB   | #####3     |  53% libmklml-2019.0.3    | 21.4 MB   | #####3     |  54% libmklml-2019.0.3    | 21.4 MB   | #####4     |  54% libmklml-2019.0.3    | 21.4 MB   | #####4     |  55% libmklml-2019.0.3    | 21.4 MB   | #####5     |  55% libmklml-2019.0.3    | 21.4 MB   | #####5     |  56% libmklml-2019.0.3    | 21.4 MB   | #####6     |  56% libmklml-2019.0.3    | 21.4 MB   | #####6     |  57% libmklml-2019.0.3    | 21.4 MB   | #####7     |  57% libmklml-2019.0.3    | 21.4 MB   | #####7     |  58% libmklml-2019.0.3    | 21.4 MB   | #####8     |  58% libmklml-2019.0.3    | 21.4 MB   | #####8     |  59% libmklml-2019.0.3    | 21.4 MB   | #####9     |  59% libmklml-2019.0.3    | 21.4 MB   | #####9     |  59% libmklml-2019.0.3    | 21.4 MB   | #####9     |  60% libmklml-2019.0.3    | 21.4 MB   | ######     |  60% libmklml-2019.0.3    | 21.4 MB   | ######     |  61% libmklml-2019.0.3    | 21.4 MB   | ######1    |  61% libmklml-2019.0.3    | 21.4 MB   | ######1    |  62% libmklml-2019.0.3    | 21.4 MB   | ######2    |  62% libmklml-2019.0.3    | 21.4 MB   | ######2    |  63% libmklml-2019.0.3    | 21.4 MB   | ######3    |  63% libmklml-2019.0.3    | 21.4 MB   | ######3    |  64% libmklml-2019.0.3    | 21.4 MB   | ######4    |  64% libmklml-2019.0.3    | 21.4 MB   | ######4    |  65% libmklml-2019.0.3    | 21.4 MB   | ######5    |  65% libmklml-2019.0.3    | 21.4 MB   | ######5    |  66% libmklml-2019.0.3    | 21.4 MB   | ######6    |  66% libmklml-2019.0.3    | 21.4 MB   | ######6    |  67% libmklml-2019.0.3    | 21.4 MB   | ######7    |  67% libmklml-2019.0.3    | 21.4 MB   | ######7    |  68% libmklml-2019.0.3    | 21.4 MB   | ######8    |  68% libmklml-2019.0.3    | 21.4 MB   | ######8    |  69% libmklml-2019.0.3    | 21.4 MB   | ######9    |  69% libmklml-2019.0.3    | 21.4 MB   | ######9    |  70% libmklml-2019.0.3    | 21.4 MB   | #######    |  70% libmklml-2019.0.3    | 21.4 MB   | #######    |  71% libmklml-2019.0.3    | 21.4 MB   | #######1   |  71% libmklml-2019.0.3    | 21.4 MB   | #######1   |  72% libmklml-2019.0.3    | 21.4 MB   | #######2   |  72% libmklml-2019.0.3    | 21.4 MB   | #######2   |  73% libmklml-2019.0.3    | 21.4 MB   | #######3   |  73% libmklml-2019.0.3    | 21.4 MB   | #######3   |  74% libmklml-2019.0.3    | 21.4 MB   | #######4   |  74% libmklml-2019.0.3    | 21.4 MB   | #######4   |  75% libmklml-2019.0.3    | 21.4 MB   | #######5   |  75% libmklml-2019.0.3    | 21.4 MB   | #######5   |  76% libmklml-2019.0.3    | 21.4 MB   | #######6   |  76% libmklml-2019.0.3    | 21.4 MB   | #######7   |  77% libmklml-2019.0.3    | 21.4 MB   | #######7   |  78% libmklml-2019.0.3    | 21.4 MB   | #######8   |  79% libmklml-2019.0.3    | 21.4 MB   | #######9   |  79% libmklml-2019.0.3    | 21.4 MB   | #######9   |  80% libmklml-2019.0.3    | 21.4 MB   | ########   |  81% libmklml-2019.0.3    | 21.4 MB   | ########1  |  82% libmklml-2019.0.3    | 21.4 MB   | ########2  |  82% libmklml-2019.0.3    | 21.4 MB   | ########3  |  83% libmklml-2019.0.3    | 21.4 MB   | ########3  |  84% libmklml-2019.0.3    | 21.4 MB   | ########4  |  85% libmklml-2019.0.3    | 21.4 MB   | ########5  |  85% libmklml-2019.0.3    | 21.4 MB   | ########5  |  86% libmklml-2019.0.3    | 21.4 MB   | ########6  |  87% libmklml-2019.0.3    | 21.4 MB   | ########7  |  87% libmklml-2019.0.3    | 21.4 MB   | ########8  |  88% libmklml-2019.0.3    | 21.4 MB   | ########8  |  89% libmklml-2019.0.3    | 21.4 MB   | ########9  |  90% libmklml-2019.0.3    | 21.4 MB   | #########  |  91% libmklml-2019.0.3    | 21.4 MB   | #########1 |  91% libmklml-2019.0.3    | 21.4 MB   | #########1 |  92% libmklml-2019.0.3    | 21.4 MB   | #########2 |  93% libmklml-2019.0.3    | 21.4 MB   | #########3 |  93% libmklml-2019.0.3    | 21.4 MB   | #########3 |  94% libmklml-2019.0.3    | 21.4 MB   | #########4 |  95% libmklml-2019.0.3    | 21.4 MB   | #########5 |  95% libmklml-2019.0.3    | 21.4 MB   | #########5 |  96% libmklml-2019.0.3    | 21.4 MB   | #########6 |  96% libmklml-2019.0.3    | 21.4 MB   | #########7 |  97% libmklml-2019.0.3    | 21.4 MB   | #########8 |  98% libmklml-2019.0.3    | 21.4 MB   | #########8 |  99% libmklml-2019.0.3    | 21.4 MB   | #########9 |  99% libmklml-2019.0.3    | 21.4 MB   | #########9 | 100% libmklml-2019.0.3    | 21.4 MB   | ########## | 100% 
+keras-applications-1 | 31 KB     |            |   0% keras-applications-1 | 31 KB     | ###9       |  39% keras-applications-1 | 31 KB     | ########## | 100% 
+numpy-1.16.3         | 4.0 MB    |            |   0% numpy-1.16.3         | 4.0 MB    |            |   0% numpy-1.16.3         | 4.0 MB    | 3          |   4% numpy-1.16.3         | 4.0 MB    | 5          |   6% numpy-1.16.3         | 4.0 MB    | 8          |   9% numpy-1.16.3         | 4.0 MB    | #          |  11% numpy-1.16.3         | 4.0 MB    | #3         |  14% numpy-1.16.3         | 4.0 MB    | #5         |  16% numpy-1.16.3         | 4.0 MB    | #8         |  19% numpy-1.16.3         | 4.0 MB    | ##         |  21% numpy-1.16.3         | 4.0 MB    | ##3        |  24% numpy-1.16.3         | 4.0 MB    | ##6        |  26% numpy-1.16.3         | 4.0 MB    | ##8        |  29% numpy-1.16.3         | 4.0 MB    | ###1       |  31% numpy-1.16.3         | 4.0 MB    | ###3       |  34% numpy-1.16.3         | 4.0 MB    | ###6       |  37% numpy-1.16.3         | 4.0 MB    | ###8       |  39% numpy-1.16.3         | 4.0 MB    | ####1      |  42% numpy-1.16.3         | 4.0 MB    | ####4      |  44% numpy-1.16.3         | 4.0 MB    | ####7      |  47% numpy-1.16.3         | 4.0 MB    | #####      |  50% numpy-1.16.3         | 4.0 MB    | #####2     |  53% numpy-1.16.3         | 4.0 MB    | #####5     |  56% numpy-1.16.3         | 4.0 MB    | #####8     |  58% numpy-1.16.3         | 4.0 MB    | ######     |  61% numpy-1.16.3         | 4.0 MB    | ######3    |  63% numpy-1.16.3         | 4.0 MB    | ######5    |  66% numpy-1.16.3         | 4.0 MB    | ######8    |  69% numpy-1.16.3         | 4.0 MB    | #######    |  71% numpy-1.16.3         | 4.0 MB    | #######3   |  74% numpy-1.16.3         | 4.0 MB    | #######6   |  76% numpy-1.16.3         | 4.0 MB    | #######8   |  79% numpy-1.16.3         | 4.0 MB    | ########   |  81% numpy-1.16.3         | 4.0 MB    | ########3  |  84% numpy-1.16.3         | 4.0 MB    | ########5  |  86% numpy-1.16.3         | 4.0 MB    | ########9  |  89% numpy-1.16.3         | 4.0 MB    | #########2 |  92% numpy-1.16.3         | 4.0 MB    | #########6 |  97% numpy-1.16.3         | 4.0 MB    | ########## | 100% 
+hdf5-1.10.4          | 34.9 MB   |            |   0% hdf5-1.10.4          | 34.9 MB   |            |   0% hdf5-1.10.4          | 34.9 MB   |            |   0% hdf5-1.10.4          | 34.9 MB   |            |   1% hdf5-1.10.4          | 34.9 MB   | 1          |   1% hdf5-1.10.4          | 34.9 MB   | 1          |   1% hdf5-1.10.4          | 34.9 MB   | 1          |   2% hdf5-1.10.4          | 34.9 MB   | 1          |   2% hdf5-1.10.4          | 34.9 MB   | 2          |   2% hdf5-1.10.4          | 34.9 MB   | 2          |   2% hdf5-1.10.4          | 34.9 MB   | 2          |   3% hdf5-1.10.4          | 34.9 MB   | 2          |   3% hdf5-1.10.4          | 34.9 MB   | 3          |   3% hdf5-1.10.4          | 34.9 MB   | 3          |   4% hdf5-1.10.4          | 34.9 MB   | 3          |   4% hdf5-1.10.4          | 34.9 MB   | 4          |   4% hdf5-1.10.4          | 34.9 MB   | 4          |   4% hdf5-1.10.4          | 34.9 MB   | 4          |   5% hdf5-1.10.4          | 34.9 MB   | 5          |   5% hdf5-1.10.4          | 34.9 MB   | 5          |   5% hdf5-1.10.4          | 34.9 MB   | 5          |   6% hdf5-1.10.4          | 34.9 MB   | 6          |   6% hdf5-1.10.4          | 34.9 MB   | 6          |   6% hdf5-1.10.4          | 34.9 MB   | 6          |   7% hdf5-1.10.4          | 34.9 MB   | 6          |   7% hdf5-1.10.4          | 34.9 MB   | 7          |   7% hdf5-1.10.4          | 34.9 MB   | 7          |   7% hdf5-1.10.4          | 34.9 MB   | 7          |   8% hdf5-1.10.4          | 34.9 MB   | 8          |   8% hdf5-1.10.4          | 34.9 MB   | 8          |   8% hdf5-1.10.4          | 34.9 MB   | 8          |   9% hdf5-1.10.4          | 34.9 MB   | 8          |   9% hdf5-1.10.4          | 34.9 MB   | 9          |   9% hdf5-1.10.4          | 34.9 MB   | 9          |  10% hdf5-1.10.4          | 34.9 MB   | 9          |  10% hdf5-1.10.4          | 34.9 MB   | #          |  10% hdf5-1.10.4          | 34.9 MB   | #          |  10% hdf5-1.10.4          | 34.9 MB   | #          |  11% hdf5-1.10.4          | 34.9 MB   | #1         |  11% hdf5-1.10.4          | 34.9 MB   | #1         |  11% hdf5-1.10.4          | 34.9 MB   | #1         |  12% hdf5-1.10.4          | 34.9 MB   | #1         |  12% hdf5-1.10.4          | 34.9 MB   | #2         |  12% hdf5-1.10.4          | 34.9 MB   | #2         |  13% hdf5-1.10.4          | 34.9 MB   | #2         |  13% hdf5-1.10.4          | 34.9 MB   | #3         |  13% hdf5-1.10.4          | 34.9 MB   | #3         |  13% hdf5-1.10.4          | 34.9 MB   | #3         |  14% hdf5-1.10.4          | 34.9 MB   | #3         |  14% hdf5-1.10.4          | 34.9 MB   | #4         |  14% hdf5-1.10.4          | 34.9 MB   | #4         |  15% hdf5-1.10.4          | 34.9 MB   | #4         |  15% hdf5-1.10.4          | 34.9 MB   | #5         |  15% hdf5-1.10.4          | 34.9 MB   | #5         |  15% hdf5-1.10.4          | 34.9 MB   | #5         |  16% hdf5-1.10.4          | 34.9 MB   | #5         |  16% hdf5-1.10.4          | 34.9 MB   | #6         |  16% hdf5-1.10.4          | 34.9 MB   | #6         |  17% hdf5-1.10.4          | 34.9 MB   | #6         |  17% hdf5-1.10.4          | 34.9 MB   | #7         |  17% hdf5-1.10.4          | 34.9 MB   | #7         |  17% hdf5-1.10.4          | 34.9 MB   | #7         |  18% hdf5-1.10.4          | 34.9 MB   | #7         |  18% hdf5-1.10.4          | 34.9 MB   | #8         |  18% hdf5-1.10.4          | 34.9 MB   | #8         |  19% hdf5-1.10.4          | 34.9 MB   | #8         |  19% hdf5-1.10.4          | 34.9 MB   | #9         |  19% hdf5-1.10.4          | 34.9 MB   | #9         |  20% hdf5-1.10.4          | 34.9 MB   | #9         |  20% hdf5-1.10.4          | 34.9 MB   | ##         |  20% hdf5-1.10.4          | 34.9 MB   | ##         |  20% hdf5-1.10.4          | 34.9 MB   | ##         |  21% hdf5-1.10.4          | 34.9 MB   | ##1        |  21% hdf5-1.10.4          | 34.9 MB   | ##1        |  21% hdf5-1.10.4          | 34.9 MB   | ##1        |  22% hdf5-1.10.4          | 34.9 MB   | ##1        |  22% hdf5-1.10.4          | 34.9 MB   | ##2        |  22% hdf5-1.10.4          | 34.9 MB   | ##2        |  23% hdf5-1.10.4          | 34.9 MB   | ##2        |  23% hdf5-1.10.4          | 34.9 MB   | ##3        |  23% hdf5-1.10.4          | 34.9 MB   | ##3        |  23% hdf5-1.10.4          | 34.9 MB   | ##3        |  24% hdf5-1.10.4          | 34.9 MB   | ##4        |  24% hdf5-1.10.4          | 34.9 MB   | ##4        |  24% hdf5-1.10.4          | 34.9 MB   | ##4        |  25% hdf5-1.10.4          | 34.9 MB   | ##4        |  25% hdf5-1.10.4          | 34.9 MB   | ##5        |  25% hdf5-1.10.4          | 34.9 MB   | ##5        |  26% hdf5-1.10.4          | 34.9 MB   | ##5        |  26% hdf5-1.10.4          | 34.9 MB   | ##6        |  26% hdf5-1.10.4          | 34.9 MB   | ##6        |  26% hdf5-1.10.4          | 34.9 MB   | ##6        |  27% hdf5-1.10.4          | 34.9 MB   | ##7        |  27% hdf5-1.10.4          | 34.9 MB   | ##7        |  27% hdf5-1.10.4          | 34.9 MB   | ##7        |  28% hdf5-1.10.4          | 34.9 MB   | ##7        |  28% hdf5-1.10.4          | 34.9 MB   | ##8        |  28% hdf5-1.10.4          | 34.9 MB   | ##8        |  29% hdf5-1.10.4          | 34.9 MB   | ##8        |  29% hdf5-1.10.4          | 34.9 MB   | ##9        |  29% hdf5-1.10.4          | 34.9 MB   | ##9        |  29% hdf5-1.10.4          | 34.9 MB   | ##9        |  30% hdf5-1.10.4          | 34.9 MB   | ##9        |  30% hdf5-1.10.4          | 34.9 MB   | ###        |  30% hdf5-1.10.4          | 34.9 MB   | ###        |  31% hdf5-1.10.4          | 34.9 MB   | ###        |  31% hdf5-1.10.4          | 34.9 MB   | ###1       |  31% hdf5-1.10.4          | 34.9 MB   | ###1       |  32% hdf5-1.10.4          | 34.9 MB   | ###1       |  32% hdf5-1.10.4          | 34.9 MB   | ###2       |  32% hdf5-1.10.4          | 34.9 MB   | ###2       |  32% hdf5-1.10.4          | 34.9 MB   | ###2       |  33% hdf5-1.10.4          | 34.9 MB   | ###3       |  33% hdf5-1.10.4          | 34.9 MB   | ###3       |  33% hdf5-1.10.4          | 34.9 MB   | ###3       |  34% hdf5-1.10.4          | 34.9 MB   | ###3       |  34% hdf5-1.10.4          | 34.9 MB   | ###4       |  34% hdf5-1.10.4          | 34.9 MB   | ###4       |  35% hdf5-1.10.4          | 34.9 MB   | ###4       |  35% hdf5-1.10.4          | 34.9 MB   | ###5       |  35% hdf5-1.10.4          | 34.9 MB   | ###5       |  35% hdf5-1.10.4          | 34.9 MB   | ###5       |  36% hdf5-1.10.4          | 34.9 MB   | ###5       |  36% hdf5-1.10.4          | 34.9 MB   | ###6       |  36% hdf5-1.10.4          | 34.9 MB   | ###6       |  37% hdf5-1.10.4          | 34.9 MB   | ###6       |  37% hdf5-1.10.4          | 34.9 MB   | ###7       |  37% hdf5-1.10.4          | 34.9 MB   | ###7       |  37% hdf5-1.10.4          | 34.9 MB   | ###7       |  38% hdf5-1.10.4          | 34.9 MB   | ###8       |  38% hdf5-1.10.4          | 34.9 MB   | ###8       |  38% hdf5-1.10.4          | 34.9 MB   | ###8       |  39% hdf5-1.10.4          | 34.9 MB   | ###9       |  39% hdf5-1.10.4          | 34.9 MB   | ###9       |  39% hdf5-1.10.4          | 34.9 MB   | ###9       |  40% hdf5-1.10.4          | 34.9 MB   | ###9       |  40% hdf5-1.10.4          | 34.9 MB   | ####       |  40% hdf5-1.10.4          | 34.9 MB   | ####       |  40% hdf5-1.10.4          | 34.9 MB   | ####       |  41% hdf5-1.10.4          | 34.9 MB   | ####       |  41% hdf5-1.10.4          | 34.9 MB   | ####1      |  41% hdf5-1.10.4          | 34.9 MB   | ####1      |  42% hdf5-1.10.4          | 34.9 MB   | ####1      |  42% hdf5-1.10.4          | 34.9 MB   | ####2      |  42% hdf5-1.10.4          | 34.9 MB   | ####2      |  43% hdf5-1.10.4          | 34.9 MB   | ####2      |  43% hdf5-1.10.4          | 34.9 MB   | ####3      |  43% hdf5-1.10.4          | 34.9 MB   | ####3      |  43% hdf5-1.10.4          | 34.9 MB   | ####3      |  44% hdf5-1.10.4          | 34.9 MB   | ####4      |  44% hdf5-1.10.4          | 34.9 MB   | ####4      |  44% hdf5-1.10.4          | 34.9 MB   | ####4      |  45% hdf5-1.10.4          | 34.9 MB   | ####4      |  45% hdf5-1.10.4          | 34.9 MB   | ####5      |  45% hdf5-1.10.4          | 34.9 MB   | ####5      |  46% hdf5-1.10.4          | 34.9 MB   | ####5      |  46% hdf5-1.10.4          | 34.9 MB   | ####6      |  46% hdf5-1.10.4          | 34.9 MB   | ####6      |  46% hdf5-1.10.4          | 34.9 MB   | ####6      |  47% hdf5-1.10.4          | 34.9 MB   | ####7      |  47% hdf5-1.10.4          | 34.9 MB   | ####7      |  47% hdf5-1.10.4          | 34.9 MB   | ####7      |  48% hdf5-1.10.4          | 34.9 MB   | ####8      |  48% hdf5-1.10.4          | 34.9 MB   | ####8      |  48% hdf5-1.10.4          | 34.9 MB   | ####8      |  49% hdf5-1.10.4          | 34.9 MB   | ####8      |  49% hdf5-1.10.4          | 34.9 MB   | ####9      |  49% hdf5-1.10.4          | 34.9 MB   | ####9      |  49% hdf5-1.10.4          | 34.9 MB   | ####9      |  50% hdf5-1.10.4          | 34.9 MB   | #####      |  50% hdf5-1.10.4          | 34.9 MB   | #####      |  50% hdf5-1.10.4          | 34.9 MB   | #####      |  51% hdf5-1.10.4          | 34.9 MB   | #####      |  51% hdf5-1.10.4          | 34.9 MB   | #####1     |  51% hdf5-1.10.4          | 34.9 MB   | #####1     |  52% hdf5-1.10.4          | 34.9 MB   | #####1     |  52% hdf5-1.10.4          | 34.9 MB   | #####2     |  52% hdf5-1.10.4          | 34.9 MB   | #####2     |  52% hdf5-1.10.4          | 34.9 MB   | #####2     |  53% hdf5-1.10.4          | 34.9 MB   | #####2     |  53% hdf5-1.10.4          | 34.9 MB   | #####3     |  53% hdf5-1.10.4          | 34.9 MB   | #####3     |  54% hdf5-1.10.4          | 34.9 MB   | #####3     |  54% hdf5-1.10.4          | 34.9 MB   | #####4     |  54% hdf5-1.10.4          | 34.9 MB   | #####4     |  54% hdf5-1.10.4          | 34.9 MB   | #####4     |  55% hdf5-1.10.4          | 34.9 MB   | #####5     |  55% hdf5-1.10.4          | 34.9 MB   | #####5     |  55% hdf5-1.10.4          | 34.9 MB   | #####5     |  56% hdf5-1.10.4          | 34.9 MB   | #####6     |  56% hdf5-1.10.4          | 34.9 MB   | #####6     |  56% hdf5-1.10.4          | 34.9 MB   | #####6     |  57% hdf5-1.10.4          | 34.9 MB   | #####6     |  57% hdf5-1.10.4          | 34.9 MB   | #####7     |  57% hdf5-1.10.4          | 34.9 MB   | #####7     |  57% hdf5-1.10.4          | 34.9 MB   | #####7     |  58% hdf5-1.10.4          | 34.9 MB   | #####8     |  58% hdf5-1.10.4          | 34.9 MB   | #####8     |  58% hdf5-1.10.4          | 34.9 MB   | #####8     |  59% hdf5-1.10.4          | 34.9 MB   | #####8     |  59% hdf5-1.10.4          | 34.9 MB   | #####9     |  59% hdf5-1.10.4          | 34.9 MB   | #####9     |  60% hdf5-1.10.4          | 34.9 MB   | #####9     |  60% hdf5-1.10.4          | 34.9 MB   | ######     |  60% hdf5-1.10.4          | 34.9 MB   | ######     |  61% hdf5-1.10.4          | 34.9 MB   | ######     |  61% hdf5-1.10.4          | 34.9 MB   | ######1    |  61% hdf5-1.10.4          | 34.9 MB   | ######1    |  61% hdf5-1.10.4          | 34.9 MB   | ######1    |  62% hdf5-1.10.4          | 34.9 MB   | ######2    |  62% hdf5-1.10.4          | 34.9 MB   | ######2    |  62% hdf5-1.10.4          | 34.9 MB   | ######2    |  63% hdf5-1.10.4          | 34.9 MB   | ######2    |  63% hdf5-1.10.4          | 34.9 MB   | ######3    |  63% hdf5-1.10.4          | 34.9 MB   | ######3    |  64% hdf5-1.10.4          | 34.9 MB   | ######3    |  64% hdf5-1.10.4          | 34.9 MB   | ######4    |  64% hdf5-1.10.4          | 34.9 MB   | ######4    |  64% hdf5-1.10.4          | 34.9 MB   | ######4    |  65% hdf5-1.10.4          | 34.9 MB   | ######5    |  65% hdf5-1.10.4          | 34.9 MB   | ######5    |  65% hdf5-1.10.4          | 34.9 MB   | ######5    |  66% hdf5-1.10.4          | 34.9 MB   | ######5    |  66% hdf5-1.10.4          | 34.9 MB   | ######6    |  66% hdf5-1.10.4          | 34.9 MB   | ######6    |  66% hdf5-1.10.4          | 34.9 MB   | ######6    |  67% hdf5-1.10.4          | 34.9 MB   | ######7    |  67% hdf5-1.10.4          | 34.9 MB   | ######7    |  67% hdf5-1.10.4          | 34.9 MB   | ######7    |  68% hdf5-1.10.4          | 34.9 MB   | ######7    |  68% hdf5-1.10.4          | 34.9 MB   | ######8    |  68% hdf5-1.10.4          | 34.9 MB   | ######8    |  69% hdf5-1.10.4          | 34.9 MB   | ######8    |  69% hdf5-1.10.4          | 34.9 MB   | ######9    |  69% hdf5-1.10.4          | 34.9 MB   | ######9    |  69% hdf5-1.10.4          | 34.9 MB   | ######9    |  70% hdf5-1.10.4          | 34.9 MB   | ######9    |  70% hdf5-1.10.4          | 34.9 MB   | #######    |  70% hdf5-1.10.4          | 34.9 MB   | #######    |  71% hdf5-1.10.4          | 34.9 MB   | #######    |  71% hdf5-1.10.4          | 34.9 MB   | #######1   |  71% hdf5-1.10.4          | 34.9 MB   | #######1   |  71% hdf5-1.10.4          | 34.9 MB   | #######1   |  72% hdf5-1.10.4          | 34.9 MB   | #######2   |  72% hdf5-1.10.4          | 34.9 MB   | #######2   |  72% hdf5-1.10.4          | 34.9 MB   | #######2   |  73% hdf5-1.10.4          | 34.9 MB   | #######2   |  73% hdf5-1.10.4          | 34.9 MB   | #######3   |  73% hdf5-1.10.4          | 34.9 MB   | #######3   |  74% hdf5-1.10.4          | 34.9 MB   | #######3   |  74% hdf5-1.10.4          | 34.9 MB   | #######4   |  74% hdf5-1.10.4          | 34.9 MB   | #######4   |  74% hdf5-1.10.4          | 34.9 MB   | #######4   |  75% hdf5-1.10.4          | 34.9 MB   | #######5   |  75% hdf5-1.10.4          | 34.9 MB   | #######5   |  75% hdf5-1.10.4          | 34.9 MB   | #######5   |  76% hdf5-1.10.4          | 34.9 MB   | #######6   |  76% hdf5-1.10.4          | 34.9 MB   | #######6   |  77% hdf5-1.10.4          | 34.9 MB   | #######7   |  78% hdf5-1.10.4          | 34.9 MB   | #######8   |  78% hdf5-1.10.4          | 34.9 MB   | #######8   |  79% hdf5-1.10.4          | 34.9 MB   | #######9   |  79% hdf5-1.10.4          | 34.9 MB   | #######9   |  80% hdf5-1.10.4          | 34.9 MB   | ########   |  80% hdf5-1.10.4          | 34.9 MB   | ########   |  81% hdf5-1.10.4          | 34.9 MB   | ########1  |  81% hdf5-1.10.4          | 34.9 MB   | ########1  |  82% hdf5-1.10.4          | 34.9 MB   | ########2  |  82% hdf5-1.10.4          | 34.9 MB   | ########2  |  83% hdf5-1.10.4          | 34.9 MB   | ########3  |  83% hdf5-1.10.4          | 34.9 MB   | ########3  |  84% hdf5-1.10.4          | 34.9 MB   | ########4  |  84% hdf5-1.10.4          | 34.9 MB   | ########4  |  85% hdf5-1.10.4          | 34.9 MB   | ########5  |  85% hdf5-1.10.4          | 34.9 MB   | ########5  |  86% hdf5-1.10.4          | 34.9 MB   | ########6  |  86% hdf5-1.10.4          | 34.9 MB   | ########6  |  87% hdf5-1.10.4          | 34.9 MB   | ########7  |  87% hdf5-1.10.4          | 34.9 MB   | ########7  |  88% hdf5-1.10.4          | 34.9 MB   | ########8  |  88% hdf5-1.10.4          | 34.9 MB   | ########8  |  89% hdf5-1.10.4          | 34.9 MB   | ########8  |  89% hdf5-1.10.4          | 34.9 MB   | ########9  |  89% hdf5-1.10.4          | 34.9 MB   | ########9  |  90% hdf5-1.10.4          | 34.9 MB   | #########  |  90% hdf5-1.10.4          | 34.9 MB   | #########  |  91% hdf5-1.10.4          | 34.9 MB   | #########1 |  91% hdf5-1.10.4          | 34.9 MB   | #########1 |  92% hdf5-1.10.4          | 34.9 MB   | #########2 |  92% hdf5-1.10.4          | 34.9 MB   | #########2 |  93% hdf5-1.10.4          | 34.9 MB   | #########3 |  93% hdf5-1.10.4          | 34.9 MB   | #########3 |  94% hdf5-1.10.4          | 34.9 MB   | #########3 |  94% hdf5-1.10.4          | 34.9 MB   | #########4 |  94% hdf5-1.10.4          | 34.9 MB   | #########4 |  95% hdf5-1.10.4          | 34.9 MB   | #########5 |  95% hdf5-1.10.4          | 34.9 MB   | #########5 |  95% hdf5-1.10.4          | 34.9 MB   | #########5 |  96% hdf5-1.10.4          | 34.9 MB   | #########6 |  96% hdf5-1.10.4          | 34.9 MB   | #########6 |  96% hdf5-1.10.4          | 34.9 MB   | #########6 |  97% hdf5-1.10.4          | 34.9 MB   | #########7 |  97% hdf5-1.10.4          | 34.9 MB   | #########7 |  97% hdf5-1.10.4          | 34.9 MB   | #########7 |  98% hdf5-1.10.4          | 34.9 MB   | #########7 |  98% hdf5-1.10.4          | 34.9 MB   | #########8 |  98% hdf5-1.10.4          | 34.9 MB   | #########8 |  99% hdf5-1.10.4          | 34.9 MB   | #########8 |  99% hdf5-1.10.4          | 34.9 MB   | #########9 |  99% hdf5-1.10.4          | 34.9 MB   | #########9 |  99% hdf5-1.10.4          | 34.9 MB   | #########9 | 100% hdf5-1.10.4          | 34.9 MB   | ########## | 100% 
+tensorflow-estimator | 470 KB    |            |   0% tensorflow-estimator | 470 KB    | #2         |  13% tensorflow-estimator | 470 KB    | ###5       |  36% tensorflow-estimator | 470 KB    | #####8     |  59% tensorflow-estimator | 470 KB    | #######5   |  75% tensorflow-estimator | 470 KB    | #########3 |  93% tensorflow-estimator | 470 KB    | ########## | 100% 
+freetype-2.10.0      | 478 KB    |            |   0% freetype-2.10.0      | 478 KB    | 2          |   3% freetype-2.10.0      | 478 KB    | ##7        |  28% freetype-2.10.0      | 478 KB    | ####7      |  48% freetype-2.10.0      | 478 KB    | #######    |  70% freetype-2.10.0      | 478 KB    | ########4  |  84% freetype-2.10.0      | 478 KB    | ########## | 100% 
+cffi-1.12.3          | 219 KB    |            |   0% cffi-1.12.3          | 219 KB    | 5          |   5% cffi-1.12.3          | 219 KB    | ####9      |  49% cffi-1.12.3          | 219 KB    | #######5   |  75% cffi-1.12.3          | 219 KB    | ########## | 100% 
+markupsafe-1.1.1     | 28 KB     |            |   0% markupsafe-1.1.1     | 28 KB     | #######5   |  75% markupsafe-1.1.1     | 28 KB     | ########## | 100% 
+grpcio-1.16.1        | 947 KB    |            |   0% grpcio-1.16.1        | 947 KB    | #          |  10% grpcio-1.16.1        | 947 KB    | ##1        |  22% grpcio-1.16.1        | 947 KB    | ###2       |  33% grpcio-1.16.1        | 947 KB    | ####4      |  44% grpcio-1.16.1        | 947 KB    | #####5     |  56% grpcio-1.16.1        | 947 KB    | ######7    |  67% grpcio-1.16.1        | 947 KB    | #######6   |  76% grpcio-1.16.1        | 947 KB    | #########6 |  96% grpcio-1.16.1        | 947 KB    | ########## | 100% 
+tensorflow-probabili | 627 KB    |            |   0% tensorflow-probabili | 627 KB    | 1          |   2% tensorflow-probabili | 627 KB    | 9          |  10% tensorflow-probabili | 627 KB    | ##2        |  23% tensorflow-probabili | 627 KB    | ###8       |  38% tensorflow-probabili | 627 KB    | #####5     |  56% tensorflow-probabili | 627 KB    | ######8    |  69% tensorflow-probabili | 627 KB    | ########   |  80% tensorflow-probabili | 627 KB    | #########7 |  97% tensorflow-probabili | 627 KB    | ########## | 100% 
+openssl-1.1.1b       | 4.8 MB    |            |   0% openssl-1.1.1b       | 4.8 MB    | 1          |   1% openssl-1.1.1b       | 4.8 MB    | 3          |   4% openssl-1.1.1b       | 4.8 MB    | 5          |   6% openssl-1.1.1b       | 4.8 MB    | 8          |   8% openssl-1.1.1b       | 4.8 MB    | #          |  10% openssl-1.1.1b       | 4.8 MB    | #2         |  12% openssl-1.1.1b       | 4.8 MB    | #4         |  14% openssl-1.1.1b       | 4.8 MB    | #6         |  16% openssl-1.1.1b       | 4.8 MB    | #8         |  19% openssl-1.1.1b       | 4.8 MB    | ##         |  21% openssl-1.1.1b       | 4.8 MB    | ##2        |  23% openssl-1.1.1b       | 4.8 MB    | ##5        |  25% openssl-1.1.1b       | 4.8 MB    | ##7        |  27% openssl-1.1.1b       | 4.8 MB    | ##9        |  29% openssl-1.1.1b       | 4.8 MB    | ###1       |  32% openssl-1.1.1b       | 4.8 MB    | ###3       |  33% openssl-1.1.1b       | 4.8 MB    | ###5       |  36% openssl-1.1.1b       | 4.8 MB    | ###7       |  38% openssl-1.1.1b       | 4.8 MB    | ###9       |  40% openssl-1.1.1b       | 4.8 MB    | ####1      |  42% openssl-1.1.1b       | 4.8 MB    | ####3      |  44% openssl-1.1.1b       | 4.8 MB    | ####6      |  46% openssl-1.1.1b       | 4.8 MB    | ####8      |  48% openssl-1.1.1b       | 4.8 MB    | ####9      |  50% openssl-1.1.1b       | 4.8 MB    | #####1     |  52% openssl-1.1.1b       | 4.8 MB    | #####3     |  54% openssl-1.1.1b       | 4.8 MB    | #####6     |  56% openssl-1.1.1b       | 4.8 MB    | #####8     |  59% openssl-1.1.1b       | 4.8 MB    | ######     |  61% openssl-1.1.1b       | 4.8 MB    | ######3    |  63% openssl-1.1.1b       | 4.8 MB    | ######5    |  65% openssl-1.1.1b       | 4.8 MB    | ######7    |  67% openssl-1.1.1b       | 4.8 MB    | ######9    |  69% openssl-1.1.1b       | 4.8 MB    | #######1   |  71% openssl-1.1.1b       | 4.8 MB    | #######3   |  73% openssl-1.1.1b       | 4.8 MB    | #######5   |  75% openssl-1.1.1b       | 4.8 MB    | #######7   |  78% openssl-1.1.1b       | 4.8 MB    | ########   |  80% openssl-1.1.1b       | 4.8 MB    | ########4  |  84% openssl-1.1.1b       | 4.8 MB    | ########7  |  88% openssl-1.1.1b       | 4.8 MB    | #########1 |  91% openssl-1.1.1b       | 4.8 MB    | #########3 |  94% openssl-1.1.1b       | 4.8 MB    | #########7 |  97% openssl-1.1.1b       | 4.8 MB    | ########## | 100% 
+libgpuarray-0.7.6    | 314 KB    |            |   0% libgpuarray-0.7.6    | 314 KB    | ##2        |  23% libgpuarray-0.7.6    | 314 KB    | #####7     |  57% libgpuarray-0.7.6    | 314 KB    | #######5   |  75% libgpuarray-0.7.6    | 314 KB    | ########## | 100% 
+pycparser-2.19       | 171 KB    |            |   0% pycparser-2.19       | 171 KB    | 7          |   7% pycparser-2.19       | 171 KB    | #######5   |  75% pycparser-2.19       | 171 KB    | ########## | 100% 
+h5py-2.9.0           | 905 KB    |            |   0% h5py-2.9.0           | 905 KB    | 1          |   1% h5py-2.9.0           | 905 KB    | #4         |  15% h5py-2.9.0           | 905 KB    | ##5        |  25% h5py-2.9.0           | 905 KB    | ###7       |  37% h5py-2.9.0           | 905 KB    | ####9      |  49% h5py-2.9.0           | 905 KB    | ######1    |  61% h5py-2.9.0           | 905 KB    | #######2   |  73% h5py-2.9.0           | 905 KB    | ########2  |  83% h5py-2.9.0           | 905 KB    | ########## | 100% 
+pysocks-1.7.0        | 26 KB     |            |   0% pysocks-1.7.0        | 26 KB     | #######5   |  75% pysocks-1.7.0        | 26 KB     | ########## | 100% 
+theano-1.0.4         | 3.7 MB    |            |   0% theano-1.0.4         | 3.7 MB    | 1          |   2% theano-1.0.4         | 3.7 MB    | 4          |   5% theano-1.0.4         | 3.7 MB    | 7          |   8% theano-1.0.4         | 3.7 MB    | #          |  10% theano-1.0.4         | 3.7 MB    | #2         |  13% theano-1.0.4         | 3.7 MB    | #5         |  15% theano-1.0.4         | 3.7 MB    | #7         |  17% theano-1.0.4         | 3.7 MB    | #9         |  20% theano-1.0.4         | 3.7 MB    | ##2        |  23% theano-1.0.4         | 3.7 MB    | ##5        |  25% theano-1.0.4         | 3.7 MB    | ##7        |  28% theano-1.0.4         | 3.7 MB    | ###        |  31% theano-1.0.4         | 3.7 MB    | ###3       |  33% theano-1.0.4         | 3.7 MB    | ###6       |  36% theano-1.0.4         | 3.7 MB    | ###9       |  39% theano-1.0.4         | 3.7 MB    | ####1      |  42% theano-1.0.4         | 3.7 MB    | ####4      |  45% theano-1.0.4         | 3.7 MB    | ####7      |  48% theano-1.0.4         | 3.7 MB    | #####      |  51% theano-1.0.4         | 3.7 MB    | #####3     |  53% theano-1.0.4         | 3.7 MB    | #####6     |  56% theano-1.0.4         | 3.7 MB    | #####8     |  59% theano-1.0.4         | 3.7 MB    | ######1    |  62% theano-1.0.4         | 3.7 MB    | ######4    |  65% theano-1.0.4         | 3.7 MB    | ######7    |  67% theano-1.0.4         | 3.7 MB    | #######    |  70% theano-1.0.4         | 3.7 MB    | #######3   |  73% theano-1.0.4         | 3.7 MB    | #######5   |  76% theano-1.0.4         | 3.7 MB    | #######8   |  78% theano-1.0.4         | 3.7 MB    | ########   |  81% theano-1.0.4         | 3.7 MB    | ########3  |  84% theano-1.0.4         | 3.7 MB    | ########6  |  86% theano-1.0.4         | 3.7 MB    | ########8  |  89% theano-1.0.4         | 3.7 MB    | #########2 |  93% theano-1.0.4         | 3.7 MB    | #########6 |  97% theano-1.0.4         | 3.7 MB    | ########## | 100% 
+werkzeug-0.15.4      | 254 KB    |            |   0% werkzeug-0.15.4      | 254 KB    | ##8        |  28% werkzeug-0.15.4      | 254 KB    | #######    |  71% werkzeug-0.15.4      | 254 KB    | ########8  |  88% werkzeug-0.15.4      | 254 KB    | ########## | 100% 
+keras-2.2.4          | 492 KB    |            |   0% keras-2.2.4          | 492 KB    | #7         |  17% keras-2.2.4          | 492 KB    | ###8       |  39% keras-2.2.4          | 492 KB    | #####8     |  58% keras-2.2.4          | 492 KB    | #######5   |  75% keras-2.2.4          | 492 KB    | #########2 |  92% keras-2.2.4          | 492 KB    | ########## | 100% 
+_tflow_select-2.3.0  | 3 KB      |            |   0% _tflow_select-2.3.0  | 3 KB      | ########## | 100% 
+liblapack-3.8.0      | 3.5 MB    |            |   0% liblapack-3.8.0      | 3.5 MB    | 1          |   2% liblapack-3.8.0      | 3.5 MB    | 4          |   5% liblapack-3.8.0      | 3.5 MB    | 6          |   7% liblapack-3.8.0      | 3.5 MB    | #          |  10% liblapack-3.8.0      | 3.5 MB    | #3         |  13% liblapack-3.8.0      | 3.5 MB    | #5         |  16% liblapack-3.8.0      | 3.5 MB    | #8         |  19% liblapack-3.8.0      | 3.5 MB    | ##1        |  22% liblapack-3.8.0      | 3.5 MB    | ##4        |  24% liblapack-3.8.0      | 3.5 MB    | ##7        |  27% liblapack-3.8.0      | 3.5 MB    | ###        |  30% liblapack-3.8.0      | 3.5 MB    | ###2       |  33% liblapack-3.8.0      | 3.5 MB    | ###5       |  35% liblapack-3.8.0      | 3.5 MB    | ###8       |  38% liblapack-3.8.0      | 3.5 MB    | ####1      |  41% liblapack-3.8.0      | 3.5 MB    | ####4      |  44% liblapack-3.8.0      | 3.5 MB    | ####7      |  47% liblapack-3.8.0      | 3.5 MB    | #####      |  50% liblapack-3.8.0      | 3.5 MB    | #####3     |  53% liblapack-3.8.0      | 3.5 MB    | #####6     |  56% liblapack-3.8.0      | 3.5 MB    | #####8     |  59% liblapack-3.8.0      | 3.5 MB    | ######1    |  62% liblapack-3.8.0      | 3.5 MB    | ######4    |  64% liblapack-3.8.0      | 3.5 MB    | ######7    |  67% liblapack-3.8.0      | 3.5 MB    | #######    |  70% liblapack-3.8.0      | 3.5 MB    | #######3   |  74% liblapack-3.8.0      | 3.5 MB    | #######6   |  76% liblapack-3.8.0      | 3.5 MB    | #######9   |  80% liblapack-3.8.0      | 3.5 MB    | ########3  |  84% liblapack-3.8.0      | 3.5 MB    | ########7  |  88% liblapack-3.8.0      | 3.5 MB    | #########1 |  92% liblapack-3.8.0      | 3.5 MB    | #########5 |  96% liblapack-3.8.0      | 3.5 MB    | ########## | 100% 
+six-1.12.0           | 21 KB     |            |   0% six-1.12.0           | 21 KB     | #####6     |  56% six-1.12.0           | 21 KB     | ########## | 100% 
+requests-2.22.0      | 84 KB     |            |   0% requests-2.22.0      | 84 KB     | #4         |  14% requests-2.22.0      | 84 KB     | ########## | 100% 
+libtiff-4.0.10       | 1.0 MB    |            |   0% libtiff-4.0.10       | 1.0 MB    | 1          |   1% libtiff-4.0.10       | 1.0 MB    | #          |  10% libtiff-4.0.10       | 1.0 MB    | ##         |  21% libtiff-4.0.10       | 1.0 MB    | ##9        |  30% libtiff-4.0.10       | 1.0 MB    | ###9       |  40% libtiff-4.0.10       | 1.0 MB    | #####      |  50% libtiff-4.0.10       | 1.0 MB    | #####9     |  59% libtiff-4.0.10       | 1.0 MB    | ######9    |  70% libtiff-4.0.10       | 1.0 MB    | #######8   |  78% libtiff-4.0.10       | 1.0 MB    | ########6  |  87% libtiff-4.0.10       | 1.0 MB    | ########## | 100% 
+markdown-2.6.11      | 56 KB     |            |   0% markdown-2.6.11      | 56 KB     | #######5   |  75% markdown-2.6.11      | 56 KB     | ########## | 100% 
+pygpu-0.7.6          | 583 KB    |            |   0% pygpu-0.7.6          | 583 KB    | #2         |  12% pygpu-0.7.6          | 583 KB    | ###        |  31% pygpu-0.7.6          | 583 KB    | ####9      |  49% pygpu-0.7.6          | 583 KB    | ######7    |  68% pygpu-0.7.6          | 583 KB    | ########8  |  88% pygpu-0.7.6          | 583 KB    | ########## | 100% 
+tensorflow-hub-0.4.0 | 52 KB     |            |   0% tensorflow-hub-0.4.0 | 52 KB     | ##2        |  23% tensorflow-hub-0.4.0 | 52 KB     | ########## | 100% 
+asn1crypto-0.24.0    | 154 KB    |            |   0% asn1crypto-0.24.0    | 154 KB    | 7          |   8% asn1crypto-0.24.0    | 154 KB    | #######5   |  75% asn1crypto-0.24.0    | 154 KB    | ########## | 100% 
+olefile-0.46         | 31 KB     |            |   0% olefile-0.46         | 31 KB     | ########## | 100% 
+tensorflow-base-1.13 | 49.4 MB   |            |   0% tensorflow-base-1.13 | 49.4 MB   |            |   0% tensorflow-base-1.13 | 49.4 MB   |            |   0% tensorflow-base-1.13 | 49.4 MB   |            |   1% tensorflow-base-1.13 | 49.4 MB   |            |   1% tensorflow-base-1.13 | 49.4 MB   |            |   1% tensorflow-base-1.13 | 49.4 MB   | 1          |   1% tensorflow-base-1.13 | 49.4 MB   | 1          |   1% tensorflow-base-1.13 | 49.4 MB   | 1          |   2% tensorflow-base-1.13 | 49.4 MB   | 1          |   2% tensorflow-base-1.13 | 49.4 MB   | 1          |   2% tensorflow-base-1.13 | 49.4 MB   | 2          |   2% tensorflow-base-1.13 | 49.4 MB   | 2          |   2% tensorflow-base-1.13 | 49.4 MB   | 2          |   3% tensorflow-base-1.13 | 49.4 MB   | 2          |   3% tensorflow-base-1.13 | 49.4 MB   | 3          |   3% tensorflow-base-1.13 | 49.4 MB   | 3          |   3% tensorflow-base-1.13 | 49.4 MB   | 3          |   3% tensorflow-base-1.13 | 49.4 MB   | 3          |   4% tensorflow-base-1.13 | 49.4 MB   | 3          |   4% tensorflow-base-1.13 | 49.4 MB   | 4          |   4% tensorflow-base-1.13 | 49.4 MB   | 4          |   4% tensorflow-base-1.13 | 49.4 MB   | 4          |   5% tensorflow-base-1.13 | 49.4 MB   | 4          |   5% tensorflow-base-1.13 | 49.4 MB   | 4          |   5% tensorflow-base-1.13 | 49.4 MB   | 5          |   5% tensorflow-base-1.13 | 49.4 MB   | 5          |   5% tensorflow-base-1.13 | 49.4 MB   | 5          |   6% tensorflow-base-1.13 | 49.4 MB   | 5          |   6% tensorflow-base-1.13 | 49.4 MB   | 6          |   6% tensorflow-base-1.13 | 49.4 MB   | 6          |   6% tensorflow-base-1.13 | 49.4 MB   | 6          |   6% tensorflow-base-1.13 | 49.4 MB   | 6          |   7% tensorflow-base-1.13 | 49.4 MB   | 6          |   7% tensorflow-base-1.13 | 49.4 MB   | 7          |   7% tensorflow-base-1.13 | 49.4 MB   | 7          |   7% tensorflow-base-1.13 | 49.4 MB   | 7          |   7% tensorflow-base-1.13 | 49.4 MB   | 7          |   8% tensorflow-base-1.13 | 49.4 MB   | 7          |   8% tensorflow-base-1.13 | 49.4 MB   | 8          |   8% tensorflow-base-1.13 | 49.4 MB   | 8          |   8% tensorflow-base-1.13 | 49.4 MB   | 8          |   9% tensorflow-base-1.13 | 49.4 MB   | 8          |   9% tensorflow-base-1.13 | 49.4 MB   | 8          |   9% tensorflow-base-1.13 | 49.4 MB   | 9          |   9% tensorflow-base-1.13 | 49.4 MB   | 9          |   9% tensorflow-base-1.13 | 49.4 MB   | 9          |  10% tensorflow-base-1.13 | 49.4 MB   | 9          |  10% tensorflow-base-1.13 | 49.4 MB   | #          |  10% tensorflow-base-1.13 | 49.4 MB   | #          |  10% tensorflow-base-1.13 | 49.4 MB   | #          |  11% tensorflow-base-1.13 | 49.4 MB   | #          |  11% tensorflow-base-1.13 | 49.4 MB   | #          |  11% tensorflow-base-1.13 | 49.4 MB   | #1         |  11% tensorflow-base-1.13 | 49.4 MB   | #1         |  11% tensorflow-base-1.13 | 49.4 MB   | #1         |  12% tensorflow-base-1.13 | 49.4 MB   | #1         |  12% tensorflow-base-1.13 | 49.4 MB   | #1         |  12% tensorflow-base-1.13 | 49.4 MB   | #2         |  12% tensorflow-base-1.13 | 49.4 MB   | #2         |  12% tensorflow-base-1.13 | 49.4 MB   | #2         |  13% tensorflow-base-1.13 | 49.4 MB   | #2         |  13% tensorflow-base-1.13 | 49.4 MB   | #2         |  13% tensorflow-base-1.13 | 49.4 MB   | #3         |  13% tensorflow-base-1.13 | 49.4 MB   | #3         |  13% tensorflow-base-1.13 | 49.4 MB   | #3         |  14% tensorflow-base-1.13 | 49.4 MB   | #3         |  14% tensorflow-base-1.13 | 49.4 MB   | #4         |  14% tensorflow-base-1.13 | 49.4 MB   | #4         |  14% tensorflow-base-1.13 | 49.4 MB   | #4         |  14% tensorflow-base-1.13 | 49.4 MB   | #4         |  15% tensorflow-base-1.13 | 49.4 MB   | #4         |  15% tensorflow-base-1.13 | 49.4 MB   | #5         |  15% tensorflow-base-1.13 | 49.4 MB   | #5         |  15% tensorflow-base-1.13 | 49.4 MB   | #5         |  15% tensorflow-base-1.13 | 49.4 MB   | #5         |  16% tensorflow-base-1.13 | 49.4 MB   | #5         |  16% tensorflow-base-1.13 | 49.4 MB   | #6         |  16% tensorflow-base-1.13 | 49.4 MB   | #6         |  16% tensorflow-base-1.13 | 49.4 MB   | #6         |  16% tensorflow-base-1.13 | 49.4 MB   | #6         |  17% tensorflow-base-1.13 | 49.4 MB   | #6         |  17% tensorflow-base-1.13 | 49.4 MB   | #7         |  17% tensorflow-base-1.13 | 49.4 MB   | #7         |  17% tensorflow-base-1.13 | 49.4 MB   | #7         |  17% tensorflow-base-1.13 | 49.4 MB   | #7         |  18% tensorflow-base-1.13 | 49.4 MB   | #7         |  18% tensorflow-base-1.13 | 49.4 MB   | #8         |  18% tensorflow-base-1.13 | 49.4 MB   | #8         |  18% tensorflow-base-1.13 | 49.4 MB   | #8         |  19% tensorflow-base-1.13 | 49.4 MB   | #8         |  19% tensorflow-base-1.13 | 49.4 MB   | #8         |  19% tensorflow-base-1.13 | 49.4 MB   | #9         |  19% tensorflow-base-1.13 | 49.4 MB   | #9         |  19% tensorflow-base-1.13 | 49.4 MB   | #9         |  20% tensorflow-base-1.13 | 49.4 MB   | #9         |  20% tensorflow-base-1.13 | 49.4 MB   | ##         |  20% tensorflow-base-1.13 | 49.4 MB   | ##         |  20% tensorflow-base-1.13 | 49.4 MB   | ##         |  20% tensorflow-base-1.13 | 49.4 MB   | ##         |  21% tensorflow-base-1.13 | 49.4 MB   | ##         |  21% tensorflow-base-1.13 | 49.4 MB   | ##1        |  21% tensorflow-base-1.13 | 49.4 MB   | ##1        |  21% tensorflow-base-1.13 | 49.4 MB   | ##1        |  22% tensorflow-base-1.13 | 49.4 MB   | ##1        |  22% tensorflow-base-1.13 | 49.4 MB   | ##1        |  22% tensorflow-base-1.13 | 49.4 MB   | ##2        |  22% tensorflow-base-1.13 | 49.4 MB   | ##2        |  22% tensorflow-base-1.13 | 49.4 MB   | ##2        |  23% tensorflow-base-1.13 | 49.4 MB   | ##2        |  23% tensorflow-base-1.13 | 49.4 MB   | ##2        |  23% tensorflow-base-1.13 | 49.4 MB   | ##3        |  23% tensorflow-base-1.13 | 49.4 MB   | ##3        |  23% tensorflow-base-1.13 | 49.4 MB   | ##3        |  24% tensorflow-base-1.13 | 49.4 MB   | ##3        |  24% tensorflow-base-1.13 | 49.4 MB   | ##4        |  24% tensorflow-base-1.13 | 49.4 MB   | ##4        |  24% tensorflow-base-1.13 | 49.4 MB   | ##4        |  24% tensorflow-base-1.13 | 49.4 MB   | ##4        |  25% tensorflow-base-1.13 | 49.4 MB   | ##4        |  25% tensorflow-base-1.13 | 49.4 MB   | ##5        |  25% tensorflow-base-1.13 | 49.4 MB   | ##5        |  25% tensorflow-base-1.13 | 49.4 MB   | ##5        |  25% tensorflow-base-1.13 | 49.4 MB   | ##5        |  26% tensorflow-base-1.13 | 49.4 MB   | ##5        |  26% tensorflow-base-1.13 | 49.4 MB   | ##6        |  26% tensorflow-base-1.13 | 49.4 MB   | ##6        |  26% tensorflow-base-1.13 | 49.4 MB   | ##6        |  27% tensorflow-base-1.13 | 49.4 MB   | ##6        |  27% tensorflow-base-1.13 | 49.4 MB   | ##6        |  27% tensorflow-base-1.13 | 49.4 MB   | ##7        |  27% tensorflow-base-1.13 | 49.4 MB   | ##7        |  27% tensorflow-base-1.13 | 49.4 MB   | ##7        |  28% tensorflow-base-1.13 | 49.4 MB   | ##7        |  28% tensorflow-base-1.13 | 49.4 MB   | ##8        |  28% tensorflow-base-1.13 | 49.4 MB   | ##8        |  28% tensorflow-base-1.13 | 49.4 MB   | ##8        |  28% tensorflow-base-1.13 | 49.4 MB   | ##8        |  29% tensorflow-base-1.13 | 49.4 MB   | ##8        |  29% tensorflow-base-1.13 | 49.4 MB   | ##9        |  29% tensorflow-base-1.13 | 49.4 MB   | ##9        |  29% tensorflow-base-1.13 | 49.4 MB   | ##9        |  29% tensorflow-base-1.13 | 49.4 MB   | ##9        |  30% tensorflow-base-1.13 | 49.4 MB   | ##9        |  30% tensorflow-base-1.13 | 49.4 MB   | ###        |  30% tensorflow-base-1.13 | 49.4 MB   | ###        |  30% tensorflow-base-1.13 | 49.4 MB   | ###        |  31% tensorflow-base-1.13 | 49.4 MB   | ###        |  31% tensorflow-base-1.13 | 49.4 MB   | ###        |  31% tensorflow-base-1.13 | 49.4 MB   | ###1       |  31% tensorflow-base-1.13 | 49.4 MB   | ###1       |  31% tensorflow-base-1.13 | 49.4 MB   | ###1       |  32% tensorflow-base-1.13 | 49.4 MB   | ###1       |  32% tensorflow-base-1.13 | 49.4 MB   | ###2       |  32% tensorflow-base-1.13 | 49.4 MB   | ###2       |  32% tensorflow-base-1.13 | 49.4 MB   | ###2       |  32% tensorflow-base-1.13 | 49.4 MB   | ###2       |  33% tensorflow-base-1.13 | 49.4 MB   | ###2       |  33% tensorflow-base-1.13 | 49.4 MB   | ###3       |  33% tensorflow-base-1.13 | 49.4 MB   | ###3       |  33% tensorflow-base-1.13 | 49.4 MB   | ###3       |  34% tensorflow-base-1.13 | 49.4 MB   | ###3       |  34% tensorflow-base-1.13 | 49.4 MB   | ###3       |  34% tensorflow-base-1.13 | 49.4 MB   | ###4       |  34% tensorflow-base-1.13 | 49.4 MB   | ###4       |  34% tensorflow-base-1.13 | 49.4 MB   | ###4       |  35% tensorflow-base-1.13 | 49.4 MB   | ###4       |  35% tensorflow-base-1.13 | 49.4 MB   | ###5       |  35% tensorflow-base-1.13 | 49.4 MB   | ###5       |  35% tensorflow-base-1.13 | 49.4 MB   | ###5       |  35% tensorflow-base-1.13 | 49.4 MB   | ###5       |  36% tensorflow-base-1.13 | 49.4 MB   | ###5       |  36% tensorflow-base-1.13 | 49.4 MB   | ###6       |  36% tensorflow-base-1.13 | 49.4 MB   | ###6       |  36% tensorflow-base-1.13 | 49.4 MB   | ###6       |  36% tensorflow-base-1.13 | 49.4 MB   | ###6       |  37% tensorflow-base-1.13 | 49.4 MB   | ###6       |  37% tensorflow-base-1.13 | 49.4 MB   | ###7       |  37% tensorflow-base-1.13 | 49.4 MB   | ###7       |  37% tensorflow-base-1.13 | 49.4 MB   | ###7       |  38% tensorflow-base-1.13 | 49.4 MB   | ###7       |  38% tensorflow-base-1.13 | 49.4 MB   | ###7       |  38% tensorflow-base-1.13 | 49.4 MB   | ###8       |  38% tensorflow-base-1.13 | 49.4 MB   | ###8       |  38% tensorflow-base-1.13 | 49.4 MB   | ###8       |  39% tensorflow-base-1.13 | 49.4 MB   | ###8       |  39% tensorflow-base-1.13 | 49.4 MB   | ###9       |  39% tensorflow-base-1.13 | 49.4 MB   | ###9       |  39% tensorflow-base-1.13 | 49.4 MB   | ###9       |  39% tensorflow-base-1.13 | 49.4 MB   | ###9       |  40% tensorflow-base-1.13 | 49.4 MB   | ###9       |  40% tensorflow-base-1.13 | 49.4 MB   | ####       |  40% tensorflow-base-1.13 | 49.4 MB   | ####       |  40% tensorflow-base-1.13 | 49.4 MB   | ####       |  40% tensorflow-base-1.13 | 49.4 MB   | ####       |  41% tensorflow-base-1.13 | 49.4 MB   | ####       |  41% tensorflow-base-1.13 | 49.4 MB   | ####1      |  41% tensorflow-base-1.13 | 49.4 MB   | ####1      |  41% tensorflow-base-1.13 | 49.4 MB   | ####1      |  41% tensorflow-base-1.13 | 49.4 MB   | ####1      |  42% tensorflow-base-1.13 | 49.4 MB   | ####1      |  42% tensorflow-base-1.13 | 49.4 MB   | ####2      |  42% tensorflow-base-1.13 | 49.4 MB   | ####2      |  42% tensorflow-base-1.13 | 49.4 MB   | ####2      |  43% tensorflow-base-1.13 | 49.4 MB   | ####2      |  43% tensorflow-base-1.13 | 49.4 MB   | ####2      |  43% tensorflow-base-1.13 | 49.4 MB   | ####3      |  43% tensorflow-base-1.13 | 49.4 MB   | ####3      |  43% tensorflow-base-1.13 | 49.4 MB   | ####3      |  44% tensorflow-base-1.13 | 49.4 MB   | ####3      |  44% tensorflow-base-1.13 | 49.4 MB   | ####3      |  44% tensorflow-base-1.13 | 49.4 MB   | ####4      |  44% tensorflow-base-1.13 | 49.4 MB   | ####4      |  44% tensorflow-base-1.13 | 49.4 MB   | ####4      |  45% tensorflow-base-1.13 | 49.4 MB   | ####4      |  45% tensorflow-base-1.13 | 49.4 MB   | ####5      |  45% tensorflow-base-1.13 | 49.4 MB   | ####5      |  45% tensorflow-base-1.13 | 49.4 MB   | ####5      |  45% tensorflow-base-1.13 | 49.4 MB   | ####5      |  46% tensorflow-base-1.13 | 49.4 MB   | ####5      |  46% tensorflow-base-1.13 | 49.4 MB   | ####6      |  46% tensorflow-base-1.13 | 49.4 MB   | ####6      |  46% tensorflow-base-1.13 | 49.4 MB   | ####6      |  46% tensorflow-base-1.13 | 49.4 MB   | ####6      |  47% tensorflow-base-1.13 | 49.4 MB   | ####6      |  47% tensorflow-base-1.13 | 49.4 MB   | ####7      |  47% tensorflow-base-1.13 | 49.4 MB   | ####7      |  47% tensorflow-base-1.13 | 49.4 MB   | ####7      |  47% tensorflow-base-1.13 | 49.4 MB   | ####7      |  48% tensorflow-base-1.13 | 49.4 MB   | ####7      |  48% tensorflow-base-1.13 | 49.4 MB   | ####8      |  48% tensorflow-base-1.13 | 49.4 MB   | ####8      |  48% tensorflow-base-1.13 | 49.4 MB   | ####8      |  49% tensorflow-base-1.13 | 49.4 MB   | ####8      |  49% tensorflow-base-1.13 | 49.4 MB   | ####8      |  49% tensorflow-base-1.13 | 49.4 MB   | ####9      |  49% tensorflow-base-1.13 | 49.4 MB   | ####9      |  49% tensorflow-base-1.13 | 49.4 MB   | ####9      |  50% tensorflow-base-1.13 | 49.4 MB   | ####9      |  50% tensorflow-base-1.13 | 49.4 MB   | ####9      |  50% tensorflow-base-1.13 | 49.4 MB   | #####      |  50% tensorflow-base-1.13 | 49.4 MB   | #####      |  50% tensorflow-base-1.13 | 49.4 MB   | #####      |  51% tensorflow-base-1.13 | 49.4 MB   | #####      |  51% tensorflow-base-1.13 | 49.4 MB   | #####      |  51% tensorflow-base-1.13 | 49.4 MB   | #####1     |  51% tensorflow-base-1.13 | 49.4 MB   | #####1     |  51% tensorflow-base-1.13 | 49.4 MB   | #####1     |  52% tensorflow-base-1.13 | 49.4 MB   | #####1     |  52% tensorflow-base-1.13 | 49.4 MB   | #####1     |  52% tensorflow-base-1.13 | 49.4 MB   | #####2     |  52% tensorflow-base-1.13 | 49.4 MB   | #####2     |  52% tensorflow-base-1.13 | 49.4 MB   | #####2     |  53% tensorflow-base-1.13 | 49.4 MB   | #####2     |  53% tensorflow-base-1.13 | 49.4 MB   | #####2     |  53% tensorflow-base-1.13 | 49.4 MB   | #####3     |  53% tensorflow-base-1.13 | 49.4 MB   | #####3     |  53% tensorflow-base-1.13 | 49.4 MB   | #####3     |  54% tensorflow-base-1.13 | 49.4 MB   | #####3     |  54% tensorflow-base-1.13 | 49.4 MB   | #####3     |  54% tensorflow-base-1.13 | 49.4 MB   | #####4     |  54% tensorflow-base-1.13 | 49.4 MB   | #####4     |  54% tensorflow-base-1.13 | 49.4 MB   | #####4     |  55% tensorflow-base-1.13 | 49.4 MB   | #####4     |  55% tensorflow-base-1.13 | 49.4 MB   | #####5     |  55% tensorflow-base-1.13 | 49.4 MB   | #####5     |  55% tensorflow-base-1.13 | 49.4 MB   | #####5     |  55% tensorflow-base-1.13 | 49.4 MB   | #####5     |  56% tensorflow-base-1.13 | 49.4 MB   | #####5     |  56% tensorflow-base-1.13 | 49.4 MB   | #####6     |  56% tensorflow-base-1.13 | 49.4 MB   | #####6     |  56% tensorflow-base-1.13 | 49.4 MB   | #####6     |  57% tensorflow-base-1.13 | 49.4 MB   | #####6     |  57% tensorflow-base-1.13 | 49.4 MB   | #####6     |  57% tensorflow-base-1.13 | 49.4 MB   | #####7     |  57% tensorflow-base-1.13 | 49.4 MB   | #####7     |  57% tensorflow-base-1.13 | 49.4 MB   | #####7     |  58% tensorflow-base-1.13 | 49.4 MB   | #####7     |  58% tensorflow-base-1.13 | 49.4 MB   | #####7     |  58% tensorflow-base-1.13 | 49.4 MB   | #####8     |  58% tensorflow-base-1.13 | 49.4 MB   | #####8     |  58% tensorflow-base-1.13 | 49.4 MB   | #####8     |  59% tensorflow-base-1.13 | 49.4 MB   | #####8     |  59% tensorflow-base-1.13 | 49.4 MB   | #####8     |  59% tensorflow-base-1.13 | 49.4 MB   | #####9     |  59% tensorflow-base-1.13 | 49.4 MB   | #####9     |  59% tensorflow-base-1.13 | 49.4 MB   | #####9     |  60% tensorflow-base-1.13 | 49.4 MB   | #####9     |  60% tensorflow-base-1.13 | 49.4 MB   | ######     |  60% tensorflow-base-1.13 | 49.4 MB   | ######     |  60% tensorflow-base-1.13 | 49.4 MB   | ######     |  60% tensorflow-base-1.13 | 49.4 MB   | ######     |  61% tensorflow-base-1.13 | 49.4 MB   | ######     |  61% tensorflow-base-1.13 | 49.4 MB   | ######1    |  61% tensorflow-base-1.13 | 49.4 MB   | ######1    |  61% tensorflow-base-1.13 | 49.4 MB   | ######1    |  62% tensorflow-base-1.13 | 49.4 MB   | ######1    |  62% tensorflow-base-1.13 | 49.4 MB   | ######1    |  62% tensorflow-base-1.13 | 49.4 MB   | ######2    |  62% tensorflow-base-1.13 | 49.4 MB   | ######2    |  62% tensorflow-base-1.13 | 49.4 MB   | ######2    |  62% tensorflow-base-1.13 | 49.4 MB   | ######2    |  63% tensorflow-base-1.13 | 49.4 MB   | ######2    |  63% tensorflow-base-1.13 | 49.4 MB   | ######3    |  63% tensorflow-base-1.13 | 49.4 MB   | ######3    |  63% tensorflow-base-1.13 | 49.4 MB   | ######3    |  63% tensorflow-base-1.13 | 49.4 MB   | ######3    |  64% tensorflow-base-1.13 | 49.4 MB   | ######3    |  64% tensorflow-base-1.13 | 49.4 MB   | ######4    |  64% tensorflow-base-1.13 | 49.4 MB   | ######4    |  64% tensorflow-base-1.13 | 49.4 MB   | ######4    |  64% tensorflow-base-1.13 | 49.4 MB   | ######4    |  65% tensorflow-base-1.13 | 49.4 MB   | ######4    |  65% tensorflow-base-1.13 | 49.4 MB   | ######5    |  65% tensorflow-base-1.13 | 49.4 MB   | ######5    |  65% tensorflow-base-1.13 | 49.4 MB   | ######5    |  65% tensorflow-base-1.13 | 49.4 MB   | ######5    |  66% tensorflow-base-1.13 | 49.4 MB   | ######5    |  66% tensorflow-base-1.13 | 49.4 MB   | ######6    |  66% tensorflow-base-1.13 | 49.4 MB   | ######6    |  66% tensorflow-base-1.13 | 49.4 MB   | ######6    |  66% tensorflow-base-1.13 | 49.4 MB   | ######6    |  67% tensorflow-base-1.13 | 49.4 MB   | ######6    |  67% tensorflow-base-1.13 | 49.4 MB   | ######6    |  67% tensorflow-base-1.13 | 49.4 MB   | ######7    |  67% tensorflow-base-1.13 | 49.4 MB   | ######7    |  67% tensorflow-base-1.13 | 49.4 MB   | ######7    |  68% tensorflow-base-1.13 | 49.4 MB   | ######7    |  68% tensorflow-base-1.13 | 49.4 MB   | ######7    |  68% tensorflow-base-1.13 | 49.4 MB   | ######8    |  68% tensorflow-base-1.13 | 49.4 MB   | ######8    |  68% tensorflow-base-1.13 | 49.4 MB   | ######8    |  68% tensorflow-base-1.13 | 49.4 MB   | ######8    |  69% tensorflow-base-1.13 | 49.4 MB   | ######8    |  69% tensorflow-base-1.13 | 49.4 MB   | ######9    |  69% tensorflow-base-1.13 | 49.4 MB   | ######9    |  69% tensorflow-base-1.13 | 49.4 MB   | ######9    |  69% tensorflow-base-1.13 | 49.4 MB   | ######9    |  70% tensorflow-base-1.13 | 49.4 MB   | ######9    |  70% tensorflow-base-1.13 | 49.4 MB   | #######    |  70% tensorflow-base-1.13 | 49.4 MB   | #######    |  70% tensorflow-base-1.13 | 49.4 MB   | #######    |  70% tensorflow-base-1.13 | 49.4 MB   | #######    |  71% tensorflow-base-1.13 | 49.4 MB   | #######    |  71% tensorflow-base-1.13 | 49.4 MB   | #######1   |  71% tensorflow-base-1.13 | 49.4 MB   | #######1   |  71% tensorflow-base-1.13 | 49.4 MB   | #######1   |  72% tensorflow-base-1.13 | 49.4 MB   | #######1   |  72% tensorflow-base-1.13 | 49.4 MB   | #######2   |  72% tensorflow-base-1.13 | 49.4 MB   | #######2   |  72% tensorflow-base-1.13 | 49.4 MB   | #######2   |  73% tensorflow-base-1.13 | 49.4 MB   | #######2   |  73% tensorflow-base-1.13 | 49.4 MB   | #######2   |  73% tensorflow-base-1.13 | 49.4 MB   | #######3   |  73% tensorflow-base-1.13 | 49.4 MB   | #######3   |  73% tensorflow-base-1.13 | 49.4 MB   | #######3   |  74% tensorflow-base-1.13 | 49.4 MB   | #######3   |  74% tensorflow-base-1.13 | 49.4 MB   | #######3   |  74% tensorflow-base-1.13 | 49.4 MB   | #######4   |  74% tensorflow-base-1.13 | 49.4 MB   | #######4   |  74% tensorflow-base-1.13 | 49.4 MB   | #######4   |  75% tensorflow-base-1.13 | 49.4 MB   | #######4   |  75% tensorflow-base-1.13 | 49.4 MB   | #######4   |  75% tensorflow-base-1.13 | 49.4 MB   | #######5   |  75% tensorflow-base-1.13 | 49.4 MB   | #######5   |  75% tensorflow-base-1.13 | 49.4 MB   | #######5   |  75% tensorflow-base-1.13 | 49.4 MB   | #######5   |  75% tensorflow-base-1.13 | 49.4 MB   | #######5   |  76% tensorflow-base-1.13 | 49.4 MB   | #######5   |  76% tensorflow-base-1.13 | 49.4 MB   | #######5   |  76% tensorflow-base-1.13 | 49.4 MB   | #######5   |  76% tensorflow-base-1.13 | 49.4 MB   | #######6   |  76% tensorflow-base-1.13 | 49.4 MB   | #######6   |  76% tensorflow-base-1.13 | 49.4 MB   | #######6   |  76% tensorflow-base-1.13 | 49.4 MB   | #######6   |  76% tensorflow-base-1.13 | 49.4 MB   | #######6   |  77% tensorflow-base-1.13 | 49.4 MB   | #######6   |  77% tensorflow-base-1.13 | 49.4 MB   | #######6   |  77% tensorflow-base-1.13 | 49.4 MB   | #######6   |  77% tensorflow-base-1.13 | 49.4 MB   | #######7   |  77% tensorflow-base-1.13 | 49.4 MB   | #######7   |  77% tensorflow-base-1.13 | 49.4 MB   | #######7   |  77% tensorflow-base-1.13 | 49.4 MB   | #######7   |  77% tensorflow-base-1.13 | 49.4 MB   | #######7   |  77% tensorflow-base-1.13 | 49.4 MB   | #######7   |  78% tensorflow-base-1.13 | 49.4 MB   | #######7   |  78% tensorflow-base-1.13 | 49.4 MB   | #######7   |  78% tensorflow-base-1.13 | 49.4 MB   | #######7   |  78% tensorflow-base-1.13 | 49.4 MB   | #######7   |  78% tensorflow-base-1.13 | 49.4 MB   | #######8   |  78% tensorflow-base-1.13 | 49.4 MB   | #######8   |  78% tensorflow-base-1.13 | 49.4 MB   | #######8   |  79% tensorflow-base-1.13 | 49.4 MB   | #######8   |  79% tensorflow-base-1.13 | 49.4 MB   | #######9   |  79% tensorflow-base-1.13 | 49.4 MB   | #######9   |  79% tensorflow-base-1.13 | 49.4 MB   | #######9   |  80% tensorflow-base-1.13 | 49.4 MB   | #######9   |  80% tensorflow-base-1.13 | 49.4 MB   | ########   |  80% tensorflow-base-1.13 | 49.4 MB   | ########   |  80% tensorflow-base-1.13 | 49.4 MB   | ########   |  81% tensorflow-base-1.13 | 49.4 MB   | ########   |  81% tensorflow-base-1.13 | 49.4 MB   | ########   |  81% tensorflow-base-1.13 | 49.4 MB   | ########1  |  81% tensorflow-base-1.13 | 49.4 MB   | ########1  |  82% tensorflow-base-1.13 | 49.4 MB   | ########1  |  82% tensorflow-base-1.13 | 49.4 MB   | ########2  |  82% tensorflow-base-1.13 | 49.4 MB   | ########2  |  82% tensorflow-base-1.13 | 49.4 MB   | ########2  |  83% tensorflow-base-1.13 | 49.4 MB   | ########2  |  83% tensorflow-base-1.13 | 49.4 MB   | ########3  |  83% tensorflow-base-1.13 | 49.4 MB   | ########3  |  83% tensorflow-base-1.13 | 49.4 MB   | ########3  |  83% tensorflow-base-1.13 | 49.4 MB   | ########3  |  84% tensorflow-base-1.13 | 49.4 MB   | ########3  |  84% tensorflow-base-1.13 | 49.4 MB   | ########3  |  84% tensorflow-base-1.13 | 49.4 MB   | ########4  |  84% tensorflow-base-1.13 | 49.4 MB   | ########4  |  84% tensorflow-base-1.13 | 49.4 MB   | ########4  |  85% tensorflow-base-1.13 | 49.4 MB   | ########4  |  85% tensorflow-base-1.13 | 49.4 MB   | ########5  |  85% tensorflow-base-1.13 | 49.4 MB   | ########5  |  85% tensorflow-base-1.13 | 49.4 MB   | ########5  |  85% tensorflow-base-1.13 | 49.4 MB   | ########5  |  86% tensorflow-base-1.13 | 49.4 MB   | ########5  |  86% tensorflow-base-1.13 | 49.4 MB   | ########5  |  86% tensorflow-base-1.13 | 49.4 MB   | ########5  |  86% tensorflow-base-1.13 | 49.4 MB   | ########6  |  86% tensorflow-base-1.13 | 49.4 MB   | ########6  |  86% tensorflow-base-1.13 | 49.4 MB   | ########6  |  86% tensorflow-base-1.13 | 49.4 MB   | ########6  |  87% tensorflow-base-1.13 | 49.4 MB   | ########6  |  87% tensorflow-base-1.13 | 49.4 MB   | ########7  |  87% tensorflow-base-1.13 | 49.4 MB   | ########7  |  87% tensorflow-base-1.13 | 49.4 MB   | ########7  |  87% tensorflow-base-1.13 | 49.4 MB   | ########7  |  88% tensorflow-base-1.13 | 49.4 MB   | ########7  |  88% tensorflow-base-1.13 | 49.4 MB   | ########7  |  88% tensorflow-base-1.13 | 49.4 MB   | ########8  |  88% tensorflow-base-1.13 | 49.4 MB   | ########8  |  88% tensorflow-base-1.13 | 49.4 MB   | ########8  |  89% tensorflow-base-1.13 | 49.4 MB   | ########9  |  89% tensorflow-base-1.13 | 49.4 MB   | ########9  |  89% tensorflow-base-1.13 | 49.4 MB   | ########9  |  89% tensorflow-base-1.13 | 49.4 MB   | ########9  |  89% tensorflow-base-1.13 | 49.4 MB   | ########9  |  90% tensorflow-base-1.13 | 49.4 MB   | ########9  |  90% tensorflow-base-1.13 | 49.4 MB   | ########9  |  90% tensorflow-base-1.13 | 49.4 MB   | ########9  |  90% tensorflow-base-1.13 | 49.4 MB   | #########  |  90% tensorflow-base-1.13 | 49.4 MB   | #########  |  90% tensorflow-base-1.13 | 49.4 MB   | #########  |  90% tensorflow-base-1.13 | 49.4 MB   | #########  |  90% tensorflow-base-1.13 | 49.4 MB   | #########  |  90% tensorflow-base-1.13 | 49.4 MB   | #########  |  91% tensorflow-base-1.13 | 49.4 MB   | #########  |  91% tensorflow-base-1.13 | 49.4 MB   | #########  |  91% tensorflow-base-1.13 | 49.4 MB   | #########1 |  91% tensorflow-base-1.13 | 49.4 MB   | #########1 |  91% tensorflow-base-1.13 | 49.4 MB   | #########1 |  92% tensorflow-base-1.13 | 49.4 MB   | #########1 |  92% tensorflow-base-1.13 | 49.4 MB   | #########1 |  92% tensorflow-base-1.13 | 49.4 MB   | #########2 |  92% tensorflow-base-1.13 | 49.4 MB   | #########2 |  92% tensorflow-base-1.13 | 49.4 MB   | #########2 |  92% tensorflow-base-1.13 | 49.4 MB   | #########2 |  93% tensorflow-base-1.13 | 49.4 MB   | #########2 |  93% tensorflow-base-1.13 | 49.4 MB   | #########2 |  93% tensorflow-base-1.13 | 49.4 MB   | #########3 |  93% tensorflow-base-1.13 | 49.4 MB   | #########3 |  93% tensorflow-base-1.13 | 49.4 MB   | #########3 |  93% tensorflow-base-1.13 | 49.4 MB   | #########3 |  93% tensorflow-base-1.13 | 49.4 MB   | #########3 |  94% tensorflow-base-1.13 | 49.4 MB   | #########3 |  94% tensorflow-base-1.13 | 49.4 MB   | #########3 |  94% tensorflow-base-1.13 | 49.4 MB   | #########4 |  94% tensorflow-base-1.13 | 49.4 MB   | #########4 |  94% tensorflow-base-1.13 | 49.4 MB   | #########4 |  95% tensorflow-base-1.13 | 49.4 MB   | #########5 |  95% tensorflow-base-1.13 | 49.4 MB   | #########5 |  95% tensorflow-base-1.13 | 49.4 MB   | #########5 |  95% tensorflow-base-1.13 | 49.4 MB   | #########5 |  96% tensorflow-base-1.13 | 49.4 MB   | #########6 |  96% tensorflow-base-1.13 | 49.4 MB   | #########6 |  96% tensorflow-base-1.13 | 49.4 MB   | #########6 |  97% tensorflow-base-1.13 | 49.4 MB   | #########7 |  97% tensorflow-base-1.13 | 49.4 MB   | #########7 |  97% tensorflow-base-1.13 | 49.4 MB   | #########7 |  98% tensorflow-base-1.13 | 49.4 MB   | #########7 |  98% tensorflow-base-1.13 | 49.4 MB   | #########8 |  98% tensorflow-base-1.13 | 49.4 MB   | #########8 |  99% tensorflow-base-1.13 | 49.4 MB   | #########8 |  99% tensorflow-base-1.13 | 49.4 MB   | #########9 |  99% tensorflow-base-1.13 | 49.4 MB   | #########9 | 100% tensorflow-base-1.13 | 49.4 MB   | ########## | 100% 
+libcblas-3.8.0       | 3.5 MB    |            |   0% libcblas-3.8.0       | 3.5 MB    | 1          |   2% libcblas-3.8.0       | 3.5 MB    | 4          |   4% libcblas-3.8.0       | 3.5 MB    | 6          |   7% libcblas-3.8.0       | 3.5 MB    | #          |  10% libcblas-3.8.0       | 3.5 MB    | #3         |  13% libcblas-3.8.0       | 3.5 MB    | #5         |  16% libcblas-3.8.0       | 3.5 MB    | #8         |  18% libcblas-3.8.0       | 3.5 MB    | ##         |  21% libcblas-3.8.0       | 3.5 MB    | ##3        |  24% libcblas-3.8.0       | 3.5 MB    | ##6        |  27% libcblas-3.8.0       | 3.5 MB    | ##9        |  29% libcblas-3.8.0       | 3.5 MB    | ###2       |  32% libcblas-3.8.0       | 3.5 MB    | ###5       |  35% libcblas-3.8.0       | 3.5 MB    | ###8       |  38% libcblas-3.8.0       | 3.5 MB    | ####1      |  41% libcblas-3.8.0       | 3.5 MB    | ####3      |  44% libcblas-3.8.0       | 3.5 MB    | ####6      |  46% libcblas-3.8.0       | 3.5 MB    | ####9      |  50% libcblas-3.8.0       | 3.5 MB    | #####2     |  53% libcblas-3.8.0       | 3.5 MB    | #####5     |  55% libcblas-3.8.0       | 3.5 MB    | #####8     |  58% libcblas-3.8.0       | 3.5 MB    | ######1    |  61% libcblas-3.8.0       | 3.5 MB    | ######4    |  64% libcblas-3.8.0       | 3.5 MB    | ######7    |  67% libcblas-3.8.0       | 3.5 MB    | #######    |  70% libcblas-3.8.0       | 3.5 MB    | #######3   |  73% libcblas-3.8.0       | 3.5 MB    | #######5   |  76% libcblas-3.8.0       | 3.5 MB    | #######8   |  78% libcblas-3.8.0       | 3.5 MB    | ########1  |  81% libcblas-3.8.0       | 3.5 MB    | ########5  |  85% libcblas-3.8.0       | 3.5 MB    | ########9  |  90% libcblas-3.8.0       | 3.5 MB    | #########3 |  94% libcblas-3.8.0       | 3.5 MB    | #########7 |  98% libcblas-3.8.0       | 3.5 MB    | ########## | 100% 
+zlib-1.2.11          | 236 KB    |            |   0% zlib-1.2.11          | 236 KB    | ###        |  31% zlib-1.2.11          | 236 KB    | #######5   |  75% zlib-1.2.11          | 236 KB    | ########## | 100% 
+urllib3-1.24.3       | 151 KB    |            |   0% urllib3-1.24.3       | 151 KB    | 7          |   8% urllib3-1.24.3       | 151 KB    | #######5   |  75% urllib3-1.24.3       | 151 KB    | ########## | 100% 
+win_inet_pton-1.1.0  | 7 KB      |            |   0% win_inet_pton-1.1.0  | 7 KB      | #######5   |  75% win_inet_pton-1.1.0  | 7 KB      | ########## | 100% 
+absl-py-0.7.1        | 154 KB    |            |   0% absl-py-0.7.1        | 154 KB    | ####6      |  47% absl-py-0.7.1        | 154 KB    | ########## | 100% 
+pyreadline-2.1       | 140 KB    |            |   0% pyreadline-2.1       | 140 KB    | 8          |   9% pyreadline-2.1       | 140 KB    | #######5   |  75% pyreadline-2.1       | 140 KB    | ########## | 100% 
+mako-1.0.10          | 59 KB     |            |   0% mako-1.0.10          | 59 KB     | ########## | 100% 
+tensorflow-1.13.1    | 4 KB      |            |   0% tensorflow-1.13.1    | 4 KB      | ########## | 100% 
+vs2015_win-64-14.0.2 | 6 KB      |            |   0% vs2015_win-64-14.0.2 | 6 KB      | ########## | 100% 
+yaml-0.1.7           | 221 KB    |            |   0% yaml-0.1.7           | 221 KB    | 5          |   5% yaml-0.1.7           | 221 KB    | #####9     |  60% yaml-0.1.7           | 221 KB    | ########## | 100% 
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+
+Installation complete.
+
+> 
+> mnist <- dataset_mnist()
+Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
+ 11493376/11490434 [==============================] - 18s 2us/step
+> 
+> x_train <- mnist$train$x
+> 
+> y_train <- mnist$train$y
+> x_test <- mnist$test$x
+> y_test <- mnist$test$y
+> x_train <- array_reshape(x_train, c(nrow(x_train), 784))
+> x_test <- array_reshape(x_test, c(nrow(x_test), 784))
+> x_train <- x_train / 255
+> x_test <- x_test / 255
+> y_train <- to_categorical(y_train, 10)
+> y_test <- to_categorical(y_test, 10)
+> model <- keras_model_sequential() 
+> model %>% 
++   layer_dense(units = 256, activation = 'relu', input_shape = c(784)) %>% 
++   layer_dropout(rate = 0.4) %>% 
++   layer_dense(units = 128, activation = 'relu') %>%
++   layer_dropout(rate = 0.3) %>%
++   layer_dense(units = 10, activation = 'softmax')
+> summary(model)
+________________________________________________________________________________
+Layer (type)                        Output Shape                    Param #     
+================================================================================
+dense (Dense)                       (None, 256)                     200960      
+________________________________________________________________________________
+dropout (Dropout)                   (None, 256)                     0           
+________________________________________________________________________________
+dense_1 (Dense)                     (None, 128)                     32896       
+________________________________________________________________________________
+dropout_1 (Dropout)                 (None, 128)                     0           
+________________________________________________________________________________
+dense_2 (Dense)                     (None, 10)                      1290        
+================================================================================
+Total params: 235,146
+Trainable params: 235,146
+Non-trainable params: 0
+________________________________________________________________________________
+> model %>% compile(
++   loss = 'categorical_crossentropy',
++   optimizer = optimizer_rmsprop(),
++   metrics = c('accuracy')
++ )
+> history <- model %>% fit(
++   x_train, y_train, 
++   epochs = 30, batch_size = 128, 
++   validation_split = 0.2
++ )
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+Train on 48000 samples, validate on 12000 samples
+Epoch 1/30
+  248000/48000 [==============================] - 13s 262us/sample - loss: 0.4306 - acc: 0.8698 - val_loss: 0.1682 - val_acc: 0.9502
+Epoch 2/30
+48000/48000 [==============================] - 7s 156us/sample - loss: 0.2013 - acc: 0.9413 - val_loss: 0.1233 - val_acc: 0.9636
+Epoch 3/30
+48000/48000 [==============================] - 7s 153us/sample - loss: 0.1537 - acc: 0.9545 - val_loss: 0.1077 - val_acc: 0.9689
+Epoch 4/30
+48000/48000 [==============================] - 6s 131us/sample - loss: 0.1286 - acc: 0.9625 - val_loss: 0.0990 - val_acc: 0.9721
+Epoch 5/30
+48000/48000 [==============================] - 6s 131us/sample - loss: 0.1119 - acc: 0.9663 - val_loss: 0.0918 - val_acc: 0.9752
+Epoch 6/30
+48000/48000 [==============================] - 6s 131us/sample - loss: 0.1065 - acc: 0.9684 - val_loss: 0.0904 - val_acc: 0.9750
+Epoch 7/30
+ 48000/48000 [==============================] - 6s 130us/sample - loss: 0.0943 - acc: 0.9723 - val_loss: 0.0896 - val_acc: 0.9762
+Epoch 8/30
+48000/48000 [==============================] - 7s 148us/sample - loss: 0.0881 - acc: 0.9742 - val_loss: 0.0894 - val_acc: 0.9765
+Epoch 9/30
+ 48000/48000 [==============================] - 8s 161us/sample - loss: 0.0819 - acc: 0.9756 - val_loss: 0.0902 - val_acc: 0.9766
+Epoch 10/30
+ 48000/48000 [==============================] - 7s 143us/sample - loss: 0.0790 - acc: 0.9766 - val_loss: 0.0915 - val_acc: 0.9784
+Epoch 11/30
+ 48000/48000 [==============================] - 6s 134us/sample - loss: 0.0768 - acc: 0.9779 - val_loss: 0.0941 - val_acc: 0.9785
+Epoch 12/30
+248000/48000 [==============================] - 11s 229us/sample - loss: 0.0735 - acc: 0.9795 - val_loss: 0.0911 - val_acc: 0.9787
+Epoch 13/30
+48000/48000 [==============================] - 6s 129us/sample - loss: 0.0685 - acc: 0.9792 - val_loss: 0.1003 - val_acc: 0.9778
+Epoch 14/30
+48000/48000 [==============================] - 6s 129us/sample - loss: 0.0683 - acc: 0.9806 - val_loss: 0.0908 - val_acc: 0.9795
+Epoch 15/30
+48000/48000 [==============================] - 6s 128us/sample - loss: 0.0672 - acc: 0.9810 - val_loss: 0.0947 - val_acc: 0.9799
+Epoch 16/30
+48000/48000 [==============================] - 6s 128us/sample - loss: 0.0659 - acc: 0.9819 - val_loss: 0.1018 - val_acc: 0.9788
+Epoch 17/30
+48000/48000 [==============================] - 6s 129us/sample - loss: 0.0609 - acc: 0.9827 - val_loss: 0.0994 - val_acc: 0.9800
+Epoch 18/30
+48000/48000 [==============================] - 6s 128us/sample - loss: 0.0615 - acc: 0.9822 - val_loss: 0.0986 - val_acc: 0.9799
+Epoch 19/30
+48000/48000 [==============================] - 6s 129us/sample - loss: 0.0603 - acc: 0.9824 - val_loss: 0.1016 - val_acc: 0.9777
+Epoch 20/30
+48000/48000 [==============================] - 6s 130us/sample - loss: 0.0577 - acc: 0.9834 - val_loss: 0.1031 - val_acc: 0.9803
+Epoch 21/30
+48000/48000 [==============================] - 6s 130us/sample - loss: 0.0611 - acc: 0.9836 - val_loss: 0.1016 - val_acc: 0.9788
+Epoch 22/30
+48000/48000 [==============================] - 6s 129us/sample - loss: 0.0571 - acc: 0.9842 - val_loss: 0.1022 - val_acc: 0.9796
+Epoch 23/30
+ 48000/48000 [==============================] - 6s 130us/sample - loss: 0.0559 - acc: 0.9845 - val_loss: 0.1049 - val_acc: 0.9786
+Epoch 24/30
+48000/48000 [==============================] - 6s 129us/sample - loss: 0.0568 - acc: 0.9847 - val_loss: 0.1031 - val_acc: 0.9802
+Epoch 25/30
+48000/48000 [==============================] - 6s 129us/sample - loss: 0.0574 - acc: 0.9848 - val_loss: 0.1044 - val_acc: 0.9810
+Epoch 26/30
+48000/48000 [==============================] - 6s 130us/sample - loss: 0.0544 - acc: 0.9855 - val_loss: 0.1068 - val_acc: 0.9795
+Epoch 27/30
+48000/48000 [==============================] - 6s 130us/sample - loss: 0.0519 - acc: 0.9858 - val_loss: 0.1072 - val_acc: 0.9811
+Epoch 28/30
+48000/48000 [==============================] - 6s 129us/sample - loss: 0.0532 - acc: 0.9863 - val_loss: 0.1086 - val_acc: 0.9798
+Epoch 29/30
+48000/48000 [==============================] - 6s 131us/sample - loss: 0.0508 - acc: 0.9861 - val_loss: 0.1087 - val_acc: 0.9799
+Epoch 30/30
+48000/48000 [==============================] - 6s 130us/sample - loss: 0.0507 - acc: 0.9862 - val_loss: 0.1068 - val_acc: 0.9799
+> plot(history)
+> model %>% evaluate(x_test, y_test)
+10000/10000 [==============================] - 1s 67us/sample - loss: 0.1023 - acc: 0.9795
+$loss
+[1] 0.1023336
+
+$acc
+[1] 0.9795
+
+> model %>% predict_classes(x_test)
+    [1] 7 2 1 0 4 1 4 9 5 9 0 6 9 0 1 5 9 7 3 4 9 6 6 5 4 0 7 4 0 1 3 1 3 4 7 2
+   [37] 7 1 2 1 1 7 4 2 3 5 1 2 4 4 6 3 5 5 6 0 4 1 9 5 7 8 9 3 7 4 6 4 3 0 7 0
+   [73] 2 9 1 7 3 2 9 7 7 6 2 7 8 4 7 3 6 1 3 6 9 3 1 4 1 7 6 9 6 0 5 4 9 9 2 1
+  [109] 9 4 8 7 3 9 7 4 4 4 9 2 5 4 7 6 7 9 0 5 8 5 6 6 5 7 8 1 0 1 6 4 6 7 3 1
+  [145] 7 1 8 2 0 2 9 9 5 5 1 5 6 0 3 4 4 6 5 4 6 5 4 5 1 4 4 7 2 3 2 7 1 8 1 8
+  [181] 1 8 5 0 8 9 2 5 0 1 1 1 0 9 0 3 1 6 4 2 3 6 1 1 1 3 9 5 2 9 4 5 9 3 9 0
+  [217] 3 6 5 5 7 2 2 7 1 2 8 4 1 7 3 3 8 8 7 9 2 2 4 1 5 9 8 7 2 3 0 6 4 2 4 1
+  [253] 9 5 7 7 2 8 2 0 8 5 7 7 9 1 8 1 8 0 3 0 1 9 9 4 1 8 2 1 2 9 7 5 9 2 6 4
+  [289] 1 5 8 2 9 2 0 4 0 0 2 8 4 7 1 2 4 0 2 7 4 3 3 0 0 3 1 9 6 5 2 5 9 7 9 3
+  [325] 0 4 2 0 7 1 1 2 1 5 3 3 9 7 8 6 3 6 1 3 8 1 0 5 1 3 1 5 5 6 1 8 5 1 7 9
+  [361] 4 6 2 2 5 0 6 5 6 3 7 2 0 8 8 5 4 1 1 4 0 7 3 7 6 1 6 2 1 9 2 8 6 1 9 5
+  [397] 2 5 4 4 2 8 3 8 2 4 5 0 3 1 7 7 5 7 9 7 1 9 2 1 4 2 9 2 0 4 9 1 4 8 1 8
+  [433] 4 5 9 8 8 3 7 6 0 0 3 0 2 0 6 9 9 3 3 3 2 3 9 1 1 6 8 0 5 6 6 6 3 8 8 2
+  [469] 7 5 8 9 6 1 8 4 1 2 5 9 1 9 7 5 4 0 8 9 9 1 0 5 2 3 7 0 9 4 0 6 3 9 5 2
+  [505] 1 3 1 3 6 5 7 4 2 2 6 3 2 6 5 4 8 9 7 1 3 0 3 8 3 1 9 3 4 4 6 4 2 1 8 2
+  [541] 5 4 8 8 4 0 0 2 3 2 7 7 0 8 7 4 4 7 9 6 9 0 9 8 0 4 6 0 6 3 5 4 8 3 3 9
+  [577] 3 3 3 7 8 0 2 2 1 7 0 6 5 4 3 8 0 9 6 3 8 0 9 9 6 8 6 8 5 7 8 6 0 2 4 0
+  [613] 2 2 3 1 9 7 5 1 0 8 4 6 2 6 7 9 3 2 9 8 2 2 9 2 7 3 5 9 1 8 0 2 0 5 2 1
+  [649] 3 7 6 7 1 2 5 8 0 3 7 2 4 0 9 1 8 6 7 7 4 3 4 9 1 9 3 1 7 3 9 7 6 9 1 3
+  [685] 3 8 3 3 6 7 2 4 5 8 5 1 1 4 4 3 1 0 7 7 0 7 9 4 4 8 5 5 4 0 8 2 1 6 8 4
+  [721] 8 0 4 0 6 1 7 3 2 6 7 2 6 9 3 1 4 6 2 5 4 2 0 6 2 1 7 3 4 1 0 5 4 3 1 1
+  [757] 7 4 9 9 4 8 4 0 2 4 5 1 1 6 4 7 1 9 4 2 4 1 5 5 3 8 3 1 4 5 6 8 9 4 1 5
+  [793] 3 8 0 3 2 5 1 2 8 3 4 4 0 8 8 3 3 1 7 3 5 9 6 3 2 6 1 3 6 0 7 2 1 7 1 4
+  [829] 2 4 2 1 7 9 6 1 1 2 4 8 1 7 7 4 8 0 9 3 1 3 1 0 7 7 0 3 5 5 2 7 6 6 9 2
+  [865] 8 3 5 2 2 5 6 0 8 2 9 2 8 8 8 8 7 4 4 3 0 6 6 3 2 1 3 2 2 9 3 0 0 5 7 8
+  [901] 1 4 4 6 0 2 9 1 4 7 4 7 3 9 8 8 4 7 1 2 1 2 2 3 7 3 2 3 9 1 7 4 0 3 5 5
+  [937] 8 6 3 2 6 7 6 6 3 2 7 9 1 1 7 4 6 4 9 5 1 3 3 4 7 8 9 1 1 0 9 1 4 4 5 4
+  [973] 0 6 2 2 3 1 5 1 2 0 3 8 1 2 6 7 1 6 2 3 9 0 1 2 2 0 8 9 9 0 2 5 1 9 7 8
+ [1009] 1 0 4 1 7 9 5 4 2 6 8 1 3 7 5 4 4 1 8 1 3 8 1 2 5 8 0 6 2 1 1 2 1 5 3 4
+ [1045] 6 9 5 0 9 2 2 4 8 2 1 7 2 4 9 4 4 0 3 9 2 2 3 3 8 3 5 7 3 5 8 1 2 4 4 6
+ [1081] 4 9 5 1 0 6 9 5 9 5 9 7 3 8 0 3 7 1 3 6 7 8 5 9 7 9 6 9 6 3 7 4 6 5 3 5
+ [1117] 4 7 8 7 8 0 7 6 8 8 7 3 3 1 9 5 2 7 3 5 1 1 2 1 4 7 4 7 5 4 5 4 0 8 3 6
+ [1153] 9 6 0 2 8 4 4 4 4 6 6 4 7 9 3 4 5 5 8 7 3 7 2 7 0 2 4 1 1 1 8 9 2 8 7 2
+ [1189] 0 1 5 0 9 1 7 0 6 0 8 6 8 1 8 0 3 3 7 2 3 6 2 1 6 1 1 3 7 9 0 8 0 5 4 0
+ [1225] 2 8 2 2 9 8 4 0 9 5 8 5 1 2 1 3 1 7 4 5 7 2 0 3 8 8 6 2 5 4 1 9 2 1 5 8
+ [1261] 7 0 2 4 4 3 6 8 8 2 4 0 5 0 4 4 7 9 3 4 1 5 9 7 3 5 8 8 0 5 3 3 6 6 0 1
+ [1297] 6 0 3 7 4 4 1 2 9 1 4 6 9 9 3 9 8 4 4 3 1 3 1 3 8 7 9 4 8 8 7 9 4 1 4 5
+ [1333] 6 0 5 2 2 2 1 5 5 2 4 9 6 2 7 7 2 2 1 1 2 8 3 7 2 4 1 7 1 7 6 7 8 2 7 3
+ [1369] 1 7 5 8 2 6 2 2 5 6 5 0 9 2 4 3 3 9 7 6 6 8 0 4 1 3 8 2 9 1 8 0 6 7 2 1
+ [1405] 0 5 5 2 0 2 2 0 2 4 9 8 0 9 9 4 6 5 4 9 1 8 3 4 9 9 1 2 2 8 1 9 6 4 0 9
+ [1441] 4 8 3 8 7 0 2 5 1 9 6 2 9 4 0 9 6 0 6 2 5 4 2 3 8 4 5 5 0 3 8 5 3 5 8 6
+ [1477] 5 7 6 3 3 9 6 1 1 2 9 0 4 3 3 6 9 5 9 3 7 7 7 8 7 9 8 3 0 7 2 7 9 4 5 4
+ [1513] 9 3 2 1 4 0 2 3 7 5 9 8 8 5 0 1 1 4 7 3 9 0 0 0 6 6 2 3 7 8 4 7 7 9 2 4
+ [1549] 1 6 5 2 4 9 9 1 8 4 0 9 8 4 8 7 7 0 7 8 8 6 0 4 8 8 2 4 7 6 6 6 4 7 1 8
+ [1585] 8 2 3 6 3 0 0 3 7 6 9 7 9 9 5 4 3 3 6 1 2 3 7 3 3 2 0 3 3 8 4 3 6 3 5 0
+ [1621] 2 0 9 0 7 4 6 9 3 5 1 9 6 1 4 5 4 5 0 5 9 5 2 1 2 9 1 9 9 4 0 8 4 5 2 9
+ [1657] 2 1 2 1 7 3 6 8 8 4 9 1 9 8 5 7 5 1 1 8 6 5 2 4 4 7 2 3 5 6 8 8 6 2 3 1
+ [1693] 0 5 8 9 2 9 6 7 0 4 8 7 1 7 4 1 0 3 7 2 0 0 9 1 7 0 7 8 4 7 2 0 4 6 0 3
+ [1729] 1 1 3 3 9 6 7 4 1 5 3 0 8 7 3 9 6 9 3 5 0 2 7 2 5 1 2 5 8 0 8 8 1 5 0 3
+ [1765] 0 3 1 4 0 3 7 2 7 1 8 0 7 0 4 3 1 9 8 7 7 1 4 9 9 3 8 1 7 9 0 2 0 3 3 7
+ [1801] 6 9 2 3 3 7 7 0 0 7 5 2 9 8 7 4 4 2 6 6 1 9 6 8 2 9 0 8 3 1 1 6 3 5 1 1
+ [1837] 1 3 1 2 3 0 2 0 1 3 5 5 7 4 9 9 6 9 6 8 3 6 6 8 5 1 4 2 4 4 5 1 1 9 0 2
+ [1873] 4 9 5 7 1 8 8 5 6 9 8 7 1 1 6 7 6 3 2 2 0 8 9 2 5 1 0 8 1 4 5 7 9 6 9 0
+ [1909] 6 1 5 5 8 3 8 2 6 5 0 7 4 6 1 3 4 7 3 2 3 4 2 5 2 7 1 7 2 6 4 1 5 2 8 6
+ [1945] 0 1 8 2 5 7 7 6 9 3 5 8 4 2 4 0 8 8 3 4 9 2 7 5 8 6 5 6 0 8 6 7 3 6 4 9
+ [1981] 4 6 6 3 2 4 1 0 1 4 6 2 9 1 1 0 6 3 9 5 6 5 6 5 9 4 6 4 3 9 1 3 4 1 9 1
+ [2017] 2 1 1 9 3 5 4 0 9 3 6 1 7 5 5 3 3 0 1 3 7 5 8 6 5 1 0 8 2 3 4 6 7 9 8 1
+ [2053] 8 9 9 2 8 6 2 7 0 0 6 7 5 8 6 0 9 3 9 1 3 5 4 3 3 5 5 6 3 0 2 3 4 2 3 0
+ [2089] 9 9 4 7 2 8 4 7 0 6 2 8 5 2 8 5 7 3 0 8 2 7 2 8 2 5 5 7 6 4 0 8 4 8 2 7
+ [2125] 4 9 2 0 3 9 4 6 7 2 5 1 1 1 2 3 6 7 8 7 6 4 8 9 4 8 6 3 8 3 1 0 6 2 2 5
+ [2161] 6 9 8 8 1 4 1 7 8 4 6 1 8 4 3 1 2 8 0 8 5 9 2 4 2 0 2 7 0 9 0 2 5 7 6 7
+ [2197] 9 4 2 6 2 4 4 8 0 4 4 5 8 0 6 8 9 8 5 6 9 0 4 8 7 1 3 4 5 8 0 9 1 3 3 6
+ [2233] 9 8 7 1 0 5 7 1 7 5 2 7 9 1 8 5 2 4 9 4 7 2 2 3 4 9 1 9 2 1 7 9 4 4 1 6
+ [2269] 7 2 7 8 0 1 9 7 1 1 7 5 9 3 5 1 3 7 6 1 3 8 7 3 9 0 0 0 2 8 8 2 3 7 1 3
+ [2305] 0 3 4 4 3 8 9 2 3 9 7 1 1 7 0 4 9 6 5 9 1 3 0 2 0 2 4 6 7 0 7 1 4 6 4 5
+ [2341] 4 9 9 1 7 9 5 3 3 8 2 3 6 2 2 1 1 1 1 1 6 9 8 4 3 7 1 6 4 8 0 4 7 4 2 4
+ [2377] 0 7 0 1 9 8 8 6 0 0 4 1 6 8 2 2 3 8 4 8 2 2 1 7 5 4 4 0 4 3 4 7 3 1 0 1
+ [2413] 2 5 4 2 1 0 1 8 9 1 4 8 3 8 9 3 6 2 8 3 2 2 1 0 4 2 9 2 4 3 7 9 1 5 2 4
+ [2449] 9 0 3 8 5 3 5 0 9 4 6 2 5 0 2 7 4 6 6 8 6 6 8 6 9 1 7 2 5 9 9 0 7 2 7 6
+ [2485] 7 0 6 5 4 4 7 2 0 9 9 2 2 9 4 4 2 3 3 2 1 7 0 7 6 4 1 3 8 7 4 5 9 2 5 1
+ [2521] 8 7 3 7 1 5 5 0 9 1 4 0 6 3 3 6 0 4 9 7 5 1 6 8 9 5 5 7 9 3 8 3 8 1 5 3
+ [2557] 5 0 5 5 3 8 6 7 7 7 3 7 0 5 9 0 2 5 5 3 1 7 7 8 6 5 9 3 8 9 5 3 7 9 1 7
+ [2593] 0 0 3 7 2 5 8 1 8 6 2 9 5 7 5 7 8 6 2 5 1 4 8 4 5 8 3 0 6 2 7 3 3 2 1 0
+ [2629] 7 3 4 0 3 9 3 2 8 9 0 3 8 0 7 6 5 4 7 3 0 0 8 6 2 5 1 1 0 0 4 4 0 1 2 3
+ [2665] 2 7 7 8 5 2 5 7 6 9 1 4 1 6 4 2 4 3 5 4 3 9 5 0 1 5 3 8 9 1 9 7 9 5 5 2
+ [2701] 7 4 6 0 1 1 1 0 4 4 7 6 3 0 0 4 3 0 6 1 4 6 1 3 8 1 2 5 6 2 7 3 6 0 1 9
+ [2737] 7 6 6 8 9 2 9 5 8 3 1 0 0 7 6 6 2 1 6 9 3 1 8 6 4 0 6 0 0 0 6 3 5 9 3 4
+ [2773] 5 5 8 5 3 0 4 0 2 9 6 8 2 3 1 2 1 1 5 6 9 8 0 6 6 5 5 3 8 6 2 1 4 5 4 3
+ [2809] 7 8 3 0 9 3 5 1 1 0 4 4 7 0 1 7 0 1 6 1 4 5 6 6 5 7 8 4 4 7 2 5 3 7 0 7
+ [2845] 7 9 6 4 2 8 5 7 8 3 9 5 8 9 9 8 6 2 8 4 2 3 6 1 1 8 9 3 4 0 7 9 6 4 1 4
+ [2881] 1 3 4 9 3 1 4 7 7 4 7 2 9 3 0 8 0 8 4 0 4 4 1 5 2 8 3 4 9 5 2 8 1 5 3 7
+ [2917] 9 4 2 5 6 2 5 9 3 5 9 2 1 9 5 3 0 6 9 8 4 0 4 7 2 9 0 1 0 3 1 6 5 8 1 5
+ [2953] 3 5 0 3 5 5 9 2 8 7 0 4 9 1 9 7 7 5 3 2 0 9 1 8 6 2 3 9 6 2 1 9 1 3 5 5
+ [2989] 0 3 8 3 3 7 6 5 0 1 4 0 6 9 8 1 2 1 9 5 9 7 3 7 8 0 1 3 0 4 6 1 0 2 5 8
+ [3025] 4 4 1 1 5 4 6 6 0 6 9 2 6 2 7 1 7 9 4 0 0 3 8 2 2 3 1 6 0 5 7 7 9 2 6 7
+ [3061] 9 7 8 6 8 8 4 6 8 4 1 2 8 2 3 9 4 0 3 7 3 2 3 3 7 3 4 0 6 2 0 8 1 5 3 5
+ [3097] 4 1 7 1 5 7 5 7 3 2 2 7 3 7 3 7 8 5 4 5 2 9 6 5 3 6 7 4 1 7 1 5 2 3 6 3
+ [3133] 1 4 2 6 7 4 3 8 0 6 2 1 6 5 3 9 1 9 3 2 1 8 4 4 6 5 8 6 9 7 7 8 6 9 7 3
+ [3169] 9 4 0 5 4 6 4 1 2 3 0 0 2 6 6 5 7 0 8 6 4 7 9 0 7 3 4 2 1 8 8 5 9 2 7 1
+ [3205] 8 8 8 2 7 6 0 1 2 7 1 0 8 3 6 0 5 3 6 2 8 7 0 1 4 2 1 1 4 4 4 4 7 1 6 2
+ [3241] 9 9 0 0 1 8 8 4 3 4 2 0 6 1 6 1 2 2 2 1 2 3 7 8 1 0 0 2 1 6 6 0 1 6 2 5
+ [3277] 1 7 4 8 2 1 4 3 8 3 9 9 4 9 3 4 7 2 7 5 7 0 4 3 3 2 6 7 6 0 0 6 7 7 0 5
+ [3313] 5 8 1 0 7 0 2 8 1 5 0 8 8 0 3 2 7 7 2 6 4 7 5 5 7 2 9 2 8 4 6 8 6 5 0 0
+ [3349] 8 7 6 1 7 1 1 2 7 4 0 0 7 7 6 3 8 6 4 2 0 9 4 0 5 7 8 2 7 4 7 1 1 3 6 6
+ [3385] 2 9 1 9 4 8 3 6 9 5 9 6 2 4 6 7 7 0 6 6 9 4 8 3 5 3 4 9 0 0 5 2 5 0 7 1
+ [3421] 1 1 0 7 6 7 9 6 6 4 1 4 3 1 1 2 2 4 1 0 8 8 6 3 4 0 0 6 3 3 0 3 1 7 1 1
+ [3457] 3 1 0 9 9 7 5 4 1 4 8 9 5 3 5 1 9 8 2 7 3 9 9 0 1 0 2 9 3 9 3 3 6 2 4 9
+ [3493] 8 3 7 4 0 4 7 8 4 9 8 1 9 7 5 9 2 8 2 2 0 2 2 3 8 4 6 8 4 8 2 4 6 7 9 3
+ [3529] 3 9 4 3 1 4 4 7 0 5 9 6 0 4 4 4 4 6 1 2 3 2 6 4 5 9 6 8 5 6 0 8 6 4 1 8
+ [3565] 6 5 2 8 4 5 5 4 7 7 0 7 8 2 2 3 7 0 1 8 0 7 1 9 8 7 5 5 9 1 7 5 4 9 1 7
+ [3601] 2 1 6 6 0 1 1 4 0 7 4 2 4 0 6 4 7 6 9 5 3 4 6 5 0 1 8 8 2 8 3 5 7 8 0 8
+ [3637] 5 7 1 1 0 1 3 7 8 5 0 7 1 1 0 1 1 4 5 2 7 6 2 3 0 2 8 5 9 6 9 7 2 1 3 6
+ [3673] 4 1 8 2 4 0 5 1 0 2 2 6 4 4 3 9 6 1 6 5 7 9 2 0 2 6 0 1 4 3 5 2 8 8 0 8
+ [3709] 8 9 0 9 6 7 6 3 9 3 4 7 7 7 4 9 0 6 4 4 4 2 7 2 8 1 0 0 7 8 3 3 3 1 3 7
+ [3745] 6 1 3 1 6 0 5 2 4 7 5 9 5 8 4 9 9 1 6 5 0 1 3 7 0 3 4 8 2 2 0 2 8 1 5 1
+ [3781] 6 8 8 9 1 2 1 3 5 1 0 9 4 4 8 3 2 5 9 7 6 6 2 0 0 0 5 8 3 1 5 2 3 8 5 1
+ [3817] 8 2 4 4 9 9 6 2 3 3 5 6 4 8 0 9 2 8 3 6 7 5 7 2 9 4 9 1 2 8 6 0 7 0 9 1
+ [3853] 1 2 7 5 9 9 1 9 5 9 2 5 0 4 1 0 8 4 0 8 9 8 9 4 2 5 7 9 8 9 8 0 9 9 6 8
+ [3889] 9 9 5 9 8 6 1 0 3 3 5 2 1 6 5 0 2 8 2 5 6 2 3 0 2 2 6 4 3 5 5 1 7 2 1 6
+ [3925] 9 1 9 9 5 5 1 6 2 2 8 6 7 1 4 0 0 6 0 5 3 2 2 3 6 8 9 8 5 3 8 5 4 5 2 0
+ [3961] 5 6 3 2 8 3 9 9 5 7 9 4 6 7 1 3 7 3 6 6 0 9 0 1 9 4 2 8 8 0 1 6 9 7 5 3
+ [3997] 4 7 4 9 9 4 3 6 3 1 1 7 6 9 1 8 4 1 1 9 9 4 3 6 8 1 6 0 4 1 3 7 7 4 9 5
+ [4033] 1 0 0 1 1 6 2 1 9 8 4 0 3 6 4 9 0 7 1 6 5 7 5 2 5 1 8 5 4 7 0 6 7 2 2 5
+ [4069] 8 1 0 4 5 7 1 3 5 1 9 0 0 6 0 7 3 1 8 3 9 7 0 0 8 9 5 9 8 3 2 7 2 9 7 2
+ [4105] 1 1 3 7 5 3 1 9 8 2 2 2 8 8 5 7 3 8 9 8 8 6 8 2 3 9 7 5 6 2 9 2 8 8 1 6
+ [4141] 2 8 7 9 1 8 0 1 7 2 0 7 5 1 9 0 2 0 9 8 6 2 3 0 3 8 0 2 1 1 1 1 4 2 9 7
+ [4177] 7 5 1 1 2 1 9 9 9 1 0 2 0 2 1 1 4 6 4 1 5 4 9 7 7 1 5 6 2 2 2 8 0 6 9 6
+ [4213] 1 9 7 7 1 4 8 5 3 4 3 4 7 7 5 0 7 4 8 8 1 5 3 9 5 9 7 6 9 0 3 6 3 9 8 2
+ [4249] 8 1 2 8 6 8 5 5 3 9 4 4 2 5 1 5 1 4 4 1 4 4 3 3 9 1 2 2 3 3 0 2 9 0 0 9
+ [4285] 9 6 0 9 3 7 8 4 1 9 9 7 2 7 9 9 5 9 5 1 1 8 3 5 1 9 5 3 5 4 9 5 9 3 1 9
+ [4321] 0 9 7 5 4 9 2 0 1 0 5 1 4 9 3 3 6 1 5 2 5 2 2 0 9 2 6 6 0 1 2 0 3 0 2 5
+ [4357] 5 7 9 5 3 0 8 9 5 0 3 2 5 4 0 8 8 4 5 8 8 4 5 4 8 5 4 9 2 2 1 2 6 8 8 7
+ [4393] 0 3 6 6 4 3 8 8 7 2 2 0 0 9 3 9 9 1 9 8 6 6 4 2 6 9 2 8 5 4 5 7 9 9 9 2
+ [4429] 1 8 3 4 0 7 8 3 9 3 4 6 5 6 2 3 9 2 6 0 0 6 1 2 8 7 9 8 2 0 4 7 7 5 0 5
+ [4465] 6 4 6 7 4 3 0 7 5 0 7 4 2 0 8 9 9 4 2 4 6 7 8 7 6 9 4 1 3 7 3 0 8 7 7 6
+ [4501] 1 3 9 2 2 9 2 1 8 3 2 9 6 8 4 0 1 2 8 4 5 2 7 8 1 1 3 0 3 5 7 0 3 1 9 3
+ [4537] 5 3 1 7 7 3 0 8 4 8 2 6 5 2 9 7 3 9 0 9 9 6 4 2 9 7 2 1 1 6 7 4 7 5 9 6
+ [4573] 8 2 1 4 4 5 7 6 1 3 2 5 9 9 3 6 1 1 4 6 9 7 2 1 5 1 4 6 3 8 1 1 0 3 1 6
+ [4609] 8 4 9 0 7 3 0 2 9 0 6 6 6 3 6 7 7 2 8 6 0 8 3 0 2 9 8 3 2 5 3 8 8 0 0 1
+ [4645] 9 5 1 3 9 6 0 1 4 1 7 1 2 3 7 9 7 4 9 9 3 9 2 8 2 7 1 8 0 9 1 0 1 7 7 9
+ [4681] 6 9 9 9 2 1 6 1 3 5 7 1 9 7 6 4 5 7 6 6 9 9 6 3 6 2 9 8 1 2 2 5 5 2 3 7
+ [4717] 2 1 0 1 0 4 5 2 8 2 8 3 5 1 7 8 1 1 2 9 7 8 4 0 5 0 7 8 8 4 7 7 8 5 8 4
+ [4753] 9 8 1 3 8 0 3 1 7 4 5 5 1 6 5 7 4 9 3 5 4 7 1 2 0 8 1 6 0 7 3 4 7 3 9 6
+ [4789] 0 8 6 4 8 7 7 9 3 8 6 9 7 2 3 4 0 2 1 3 3 5 5 7 2 4 6 7 2 8 3 0 8 7 8 4
+ [4825] 0 8 4 4 5 8 5 6 6 3 0 9 3 7 6 8 9 3 4 9 5 8 9 1 2 8 8 6 8 1 3 7 9 0 1 1
+ [4861] 4 7 0 8 1 7 4 5 7 1 2 1 1 3 9 6 2 1 2 8 8 7 6 6 9 3 7 0 5 2 8 0 5 4 3 8
+ [4897] 4 6 6 2 7 9 5 1 3 2 4 3 6 1 9 4 4 7 6 5 4 1 9 9 2 7 8 0 1 3 6 1 3 4 1 1
+ [4933] 1 5 6 0 7 0 7 2 3 2 5 2 2 9 4 9 8 1 2 1 6 1 2 7 8 0 0 0 8 2 2 9 2 2 1 9
+ [4969] 9 2 7 5 1 3 4 9 4 1 8 5 6 2 8 3 1 2 8 4 9 9 3 7 0 7 7 2 3 2 4 0 3 9 9 8
+ [5005] 4 1 0 6 0 9 6 8 6 1 1 9 8 9 2 3 5 5 9 4 2 1 9 4 3 9 6 0 4 0 6 0 1 2 3 4
+ [5041] 7 8 9 0 1 2 3 4 7 8 9 0 1 2 3 4 5 6 7 8 9 8 3 4 7 8 6 2 4 0 9 7 1 9 3 8
+ [5077] 4 7 3 0 9 1 4 5 4 6 4 0 6 2 1 1 1 1 7 2 4 7 5 2 9 4 5 8 4 2 9 7 0 0 7 5
+ [5113] 1 1 7 6 6 6 8 2 2 7 7 4 0 2 4 2 1 8 9 6 1 0 5 9 6 9 8 0 3 0 8 3 9 6 3 0
+ [5149] 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 5 4 8 7 4 7 7 3 9 8
+ [5185] 8 3 1 5 8 2 7 4 2 1 5 4 5 5 8 6 4 4 4 1 8 7 5 5 1 8 9 1 3 6 3 3 2 2 6 9
+ [5221] 9 6 5 5 3 3 8 1 6 5 6 8 1 9 7 6 8 3 7 4 7 0 9 0 0 3 7 9 3 0 2 0 1 0 1 0
+ [5257] 4 0 1 0 4 7 9 6 2 6 2 2 9 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+ [5293] 2 3 4 5 6 7 8 9 8 0 5 6 6 0 8 0 2 3 7 9 4 7 1 9 1 7 1 4 0 0 4 1 7 5 7 1
+ [5329] 3 3 3 6 6 9 7 4 3 0 2 5 2 6 0 8 9 4 3 5 4 8 1 5 9 0 6 4 3 6 3 3 8 1 4 7
+ [5365] 5 7 2 2 0 0 1 7 7 9 5 9 8 9 6 8 8 2 3 6 1 2 9 8 9 5 2 6 2 4 8 4 6 5 0 1
+ [5401] 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 7 4 2 0 9 0 1 5 8 8 0
+ [5437] 2 7 8 4 4 6 1 0 4 5 3 9 4 2 0 5 0 1 3 2 9 8 6 0 1 1 8 0 4 7 7 6 3 6 0 7
+ [5473] 3 5 4 2 4 1 8 3 5 6 7 0 6 7 1 2 5 8 1 9 3 8 2 8 7 6 7 1 4 6 2 9 3 0 1 2
+ [5509] 3 4 5 6 7 0 1 2 3 4 5 0 1 2 8 9 1 4 0 9 5 0 8 0 7 7 1 1 2 9 3 6 7 2 3 8
+ [5545] 1 2 9 8 8 7 1 7 1 1 0 3 4 2 6 4 7 4 2 7 4 9 1 0 6 8 5 5 5 3 5 9 7 4 8 5
+ [5581] 9 6 9 3 0 3 0 9 1 8 1 6 0 0 1 2 3 4 5 6 9 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2
+ [5617] 3 4 5 6 7 8 9 3 5 3 2 9 3 2 1 4 5 5 2 3 2 1 3 9 7 2 5 2 8 9 1 8 8 7 8 1
+ [5653] 0 0 7 7 8 7 5 0 6 1 5 7 4 6 1 2 5 0 7 9 9 0 3 8 2 4 8 1 8 6 5 9 0 0 0 3
+ [5689] 7 1 6 4 2 6 6 0 4 5 4 1 3 8 6 3 9 9 5 9 3 7 8 5 6 4 7 6 2 2 0 9 4 0 1 2
+ [5725] 3 4 5 6 7 8 9 0 1 2 7 5 6 0 1 2 3 4 5 6 8 7 1 3 2 5 0 7 5 9 9 6 0 9 4 1
+ [5761] 3 2 1 2 3 8 3 2 6 5 6 8 2 7 4 8 1 8 0 5 3 9 4 1 9 2 1 9 6 7 9 0 4 6 1 7
+ [5797] 3 8 7 2 9 6 5 8 3 9 0 5 7 1 6 1 0 9 3 3 4 4 0 6 2 5 4 2 3 4 6 0 0 2 0 1
+ [5833] 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 0 1 2 3 4 5 6 7 8 9 8 7 1 3 7 5 2 8 0 7 5
+ [5869] 9 9 0 9 1 1 5 8 8 6 3 2 1 8 3 2 6 5 6 0 4 1 0 5 3 1 9 2 1 9 6 0 4 6 1 7
+ [5905] 3 8 7 2 9 6 5 8 3 5 7 1 6 1 0 9 6 2 5 4 2 3 4 4 6 0 0 2 0 1 2 3 4 3 6 7
+ [5941] 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 8 4 5 6 7 8 9 8 6 5 0 6 8 9 4 1 9 5 9 0 4
+ [5977] 8 9 1 4 0 5 5 2 1 5 4 0 7 6 0 1 7 0 6 8 9 9 1 7 9 8 6 0 8 1 7 7 1 3 2 3
+ [6013] 1 4 2 0 0 7 8 4 6 4 9 3 8 4 7 2 3 6 3 6 9 6 3 2 2 4 6 9 0 2 5 5 1 3 3 9
+ [6049] 7 8 7 2 2 9 7 9 8 2 1 3 1 3 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+ [6085] 2 3 4 5 6 7 8 9 1 2 6 5 3 0 7 0 4 1 4 3 6 7 2 3 1 2 1 2 9 6 0 1 3 0 2 7
+ [6121] 5 7 6 2 9 1 9 0 6 0 6 0 2 0 6 1 5 8 4 3 0 1 5 4 4 8 5 7 5 7 8 3 4 8 8 5
+ [6157] 2 9 7 1 3 8 1 0 7 5 3 6 9 4 7 7 9 9 3 4 4 3 8 6 2 0 1 2 3 4 5 6 7 8 9 0
+ [6193] 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 8 3 9 5 5 2 6 8 4 9 1 7 1 2 3 5
+ [6229] 9 6 9 1 1 1 2 9 5 6 8 1 2 0 7 7 5 8 2 9 8 9 0 4 6 7 1 3 4 5 6 0 3 6 8 7
+ [6265] 0 4 2 7 4 7 5 4 3 4 2 8 1 5 1 2 0 2 5 6 4 3 0 0 0 3 3 5 7 0 6 4 8 8 6 3
+ [6301] 4 6 9 9 8 2 7 7 1 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 0 1 2 3 4 5 6 7
+ [6337] 8 2 1 7 2 5 0 8 0 2 7 8 8 3 6 0 2 7 6 6 1 2 8 8 7 7 4 7 7 3 7 4 5 4 3 3
+ [6373] 8 4 1 1 9 7 4 3 7 3 3 0 2 5 5 6 6 3 5 2 5 9 9 8 4 1 0 6 0 9 6 8 8 5 6 1
+ [6409] 1 9 8 9 2 3 5 5 9 4 2 1 9 2 9 2 0 6 0 4 0 0 1 2 3 4 7 8 9 0 1 2 3 7 8 9
+ [6445] 0 1 2 3 4 7 8 9 7 3 0 3 1 8 7 6 4 0 2 6 8 3 2 8 1 2 0 7 1 0 4 4 5 8 0 6
+ [6481] 2 3 1 5 1 8 5 9 4 0 7 5 8 8 3 8 9 2 6 2 5 3 1 7 3 0 1 9 9 6 0 3 9 2 8 1
+ [6517] 4 3 5 2 9 2 5 8 9 5 0 1 2 4 5 6 0 1 2 3 4 5 6 7 1 2 3 4 5 1 0 4 5 6 6 3
+ [6553] 4 4 2 9 1 0 6 4 9 7 2 3 3 9 2 0 9 3 3 7 1 5 6 3 1 7 8 4 0 2 4 0 2 4 7 8
+ [6589] 0 7 0 6 9 3 2 8 6 7 6 7 5 1 0 8 1 6 7 2 9 7 9 5 8 6 2 6 2 8 1 7 5 0 1 1
+ [6625] 3 4 4 9 1 8 6 8 5 0 1 2 3 4 5 6 7 5 9 0 1 2 3 4 7 8 9 5 1 7 8 9 9 8 9 8
+ [6661] 4 1 7 7 3 3 7 6 6 6 1 9 0 1 7 6 3 2 1 7 1 3 9 1 7 6 8 4 1 4 3 6 9 6 1 4
+ [6697] 4 7 2 4 4 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 9 0 1 2 3 4 7 8 1 3 5 1 7 7
+ [6733] 2 1 4 8 3 4 4 3 9 7 4 1 2 3 5 9 1 6 0 1 0 0 2 9 7 1 1 4 0 4 7 3 6 8 0 3
+ [6769] 7 4 0 6 9 2 6 5 8 6 9 0 4 0 6 6 9 2 0 9 5 1 3 7 6 9 3 0 2 2 0 1 2 3 4 5
+ [6805] 6 7 8 9 0 1 2 3 4 5 6 7 8 4 0 1 2 3 4 5 6 7 8 9 2 1 7 2 5 0 8 0 2 7 8 8
+ [6841] 3 0 6 0 2 7 6 4 1 2 8 8 7 7 4 7 7 3 7 4 5 4 3 3 8 4 5 4 1 1 9 7 4 3 7 3
+ [6877] 3 0 2 5 5 6 3 1 5 2 5 9 9 8 4 1 0 6 0 9 6 8 8 5 6 1 1 9 8 9 2 3 5 5 9 4
+ [6913] 2 1 9 4 9 1 3 9 2 0 6 0 4 0 6 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0
+ [6949] 1 2 3 4 5 6 7 8 9 3 8 0 7 1 0 7 5 5 6 9 0 1 0 0 8 3 4 3 1 5 0 0 9 5 3 4
+ [6985] 9 3 7 6 9 2 4 5 7 2 6 4 9 4 9 4 1 2 2 5 8 1 3 2 9 4 3 8 2 2 1 2 8 6 5 1
+ [7021] 6 7 2 1 3 9 3 8 7 5 7 0 7 4 8 8 5 0 6 6 3 7 6 9 9 4 8 4 1 0 6 6 0 1 2 3
+ [7057] 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 7 4 0 4 0 1 7 9 5 1
+ [7093] 4 2 8 9 4 3 7 8 2 4 4 3 3 6 9 9 5 8 6 7 0 6 8 2 6 3 9 3 2 8 6 1 7 4 8 8
+ [7129] 9 0 3 3 9 0 5 2 9 4 1 0 3 7 5 8 7 7 8 2 9 7 1 2 6 4 2 5 2 3 6 6 5 0 0 2
+ [7165] 8 1 6 1 0 4 3 1 6 1 9 0 1 4 5 6 7 8 9 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 8 9
+ [7201] 8 4 0 0 7 2 4 3 8 6 6 3 2 6 3 3 6 1 4 7 8 0 3 1 9 0 1 9 1 2 7 0 1 3 8 2
+ [7237] 9 2 7 6 5 5 9 9 8 2 9 1 3 2 3 4 3 1 9 0 9 3 6 8 7 0 1 0 5 8 2 7 7 0 1 2
+ [7273] 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 1 7 4 8 1 5 6 5 7
+ [7309] 2 8 6 3 3 8 6 5 4 0 9 1 7 2 9 1 5 1 3 2 2 3 0 6 4 3 7 6 9 0 4 8 1 4 0 6
+ [7345] 1 2 6 9 2 2 3 5 5 1 0 7 7 9 6 2 9 4 7 0 2 3 4 0 0 8 8 8 5 1 3 7 4 9 8 8
+ [7381] 9 0 9 8 9 0 2 6 5 6 7 4 7 5 4 1 3 5 3 1 2 3 4 5 6 1 2 3 4 6 0 1 2 4 5 6
+ [7417] 7 8 1 7 2 4 1 4 1 4 9 6 8 4 5 3 7 8 8 3 3 5 6 7 0 6 1 6 8 7 0 1 5 0 8 5
+ [7453] 0 1 5 8 4 2 3 9 7 6 9 1 9 0 6 7 1 2 3 9 2 4 5 5 3 7 5 3 1 8 2 2 3 0 2 9
+ [7489] 4 9 7 0 2 7 4 9 9 2 5 9 8 3 8 6 7 0 0 1 2 3 4 3 6 7 8 9 0 1 2 3 4 5 6 7
+ [7525] 8 9 0 1 2 3 4 5 6 7 8 9 0 0 7 2 6 5 5 3 7 8 6 6 6 6 4 3 8 8 3 0 1 9 0 5
+ [7561] 4 1 9 1 2 7 0 1 3 8 2 9 2 7 4 2 6 5 5 9 9 1 1 5 7 6 8 2 9 4 3 1 9 0 9 3
+ [7597] 6 8 7 0 1 0 5 8 2 7 7 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 8 9 0 1 2 3 4 5 6
+ [7633] 7 8 9 2 1 2 1 3 9 9 8 5 3 7 0 7 7 5 7 9 9 4 7 0 3 4 1 5 8 1 4 8 4 1 8 6
+ [7669] 6 4 6 0 5 5 3 3 5 7 2 5 9 6 9 2 6 2 1 2 0 8 3 8 3 0 8 7 4 9 5 0 9 7 0 0
+ [7705] 4 6 0 9 1 6 2 7 6 8 3 5 2 1 8 3 8 6 1 0 2 1 4 0 1 2 3 4 8 6 7 8 9 0 1 2
+ [7741] 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 7 6 4 7 6 2 3 4 8 7 8 6 9 8 3 2 2 8 4
+ [7777] 8 5 6 5 0 2 0 1 1 2 9 6 8 2 1 0 6 5 2 9 7 5 3 9 2 7 1 8 3 8 1 9 5 5 0 1
+ [7813] 1 9 8 2 6 0 4 5 0 2 1 8 6 7 5 9 9 3 0 3 1 4 4 0 4 9 0 1 2 3 5 6 7 8 0 1
+ [7849] 2 3 5 6 7 8 9 0 1 2 3 5 6 7 8 9 9 7 0 9 0 1 5 8 8 0 9 3 4 7 8 4 6 1 0 4
+ [7885] 9 4 2 0 5 0 1 6 9 3 2 9 1 6 0 1 1 8 7 7 6 3 6 0 7 2 4 1 7 0 6 7 1 2 5 8
+ [7921] 1 2 2 8 7 6 8 7 1 6 2 9 3 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2
+ [7957] 3 4 5 6 7 8 9 8 9 5 7 0 3 1 6 8 4 1 5 6 4 2 7 8 1 3 4 3 4 7 2 0 5 0 1 9
+ [7993] 2 3 2 3 5 5 7 8 4 9 9 7 1 1 9 0 7 8 3 4 8 6 3 8 0 9 6 2 1 0 1 0 6 2 3 8
+ [8029] 9 0 7 2 3 4 5 5 2 8 5 4 6 6 6 7 9 1 8 2 1 5 3 4 7 9 4 0 0 0 1 2 3 4 5 6
+ [8065] 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 9 0 1 3 1 5 1 8 4 9 8 4 6 8 0 1
+ [8101] 1 9 2 6 6 8 7 4 2 9 7 0 2 1 0 3 6 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8
+ [8137] 9 0 1 2 3 4 5 6 7 8 9 8 6 5 9 7 0 2 3 4 3 8 5 1 5 2 3 0 1 2 1 3 2 6 5 3
+ [8173] 0 7 2 7 4 6 4 0 5 9 9 8 9 5 3 1 7 4 7 6 5 4 0 0 6 6 2 0 6 3 7 7 4 4 3 9
+ [8209] 2 8 9 6 0 9 5 3 8 8 7 1 4 0 4 8 5 2 3 9 0 1 9 1 5 1 7 4 8 6 2 1 6 8 8 0
+ [8245] 1 2 9 4 7 8 9 0 1 2 3 4 6 7 8 9 0 1 2 3 4 7 8 9 1 4 5 3 3 0 9 5 4 3 0 8
+ [8281] 4 6 7 0 7 7 1 6 9 1 3 6 2 3 8 2 3 8 9 5 8 8 7 1 7 1 1 0 3 4 2 6 4 7 4 2
+ [8317] 7 4 2 9 2 7 9 2 1 6 6 5 3 4 8 5 9 6 9 0 6 3 0 8 1 6 0 0 1 2 3 4 5 6 7 0
+ [8353] 1 2 3 4 7 8 9 0 1 2 3 4 7 2 5 1 6 4 3 9 9 0 9 7 1 6 4 3 6 2 0 9 8 6 5 7
+ [8389] 0 0 1 7 4 3 2 4 1 3 7 6 4 7 7 7 9 8 4 3 5 2 8 3 5 8 0 5 4 7 1 3 1 7 9 6
+ [8425] 2 0 4 1 7 3 3 9 1 6 4 3 9 8 2 1 8 6 4 1 5 5 6 5 0 1 2 3 4 5 6 7 0 9 0 1
+ [8461] 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 6 9 7 0 2 3 4 3 8 5 1 3 0 1 2 1 3 2
+ [8497] 0 7 2 6 4 0 5 9 9 8 9 5 3 1 7 4 7 0 0 6 6 6 3 7 4 2 8 9 8 7 1 4 0 4 8 5
+ [8533] 2 3 9 0 1 9 1 5 1 7 6 1 2 1 6 8 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 0
+ [8569] 1 2 3 5 6 7 8 1 0 4 5 6 6 3 4 4 2 8 1 0 6 4 9 7 2 9 2 0 9 3 3 9 1 5 2 3
+ [8605] 1 6 7 3 7 8 4 0 2 4 0 2 4 7 8 0 7 0 6 9 3 2 4 8 6 0 5 7 5 1 0 8 1 6 7 2
+ [8641] 9 7 9 5 6 5 2 6 2 8 1 7 5 5 7 3 5 0 1 1 3 8 4 9 4 5 1 8 6 8 9 0 1 2 3 4
+ [8677] 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 3 5 3 2 9 3 2 1 4 5 5
+ [8713] 2 3 2 1 3 9 7 2 1 2 8 9 1 8 8 7 8 1 0 0 6 7 7 8 7 5 0 6 1 5 7 4 6 1 2 5
+ [8749] 0 7 9 9 0 3 4 4 8 4 1 8 6 5 9 0 0 0 3 7 1 6 4 6 0 4 5 4 1 3 8 6 3 9 9 5
+ [8785] 9 3 7 8 5 6 4 7 6 2 2 0 9 4 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+ [8821] 2 3 4 5 6 7 8 9 6 4 2 6 4 7 5 5 4 7 2 9 3 9 3 8 2 0 9 5 6 0 1 0 6 5 3 5
+ [8857] 3 8 0 0 3 4 1 5 3 0 8 3 0 6 2 7 8 1 7 1 3 8 5 4 2 0 9 7 6 7 4 1 6 2 6 7
+ [8893] 1 9 8 0 6 9 4 9 9 6 2 3 7 1 9 2 2 5 3 7 8 0 1 2 3 4 7 8 9 0 1 2 3 4 7 8
+ [8929] 9 0 1 7 8 9 8 9 2 6 1 3 5 4 8 2 6 4 3 4 5 9 2 0 3 9 4 9 7 3 8 7 4 4 9 8
+ [8965] 5 8 2 6 6 2 3 1 3 2 7 3 1 9 0 1 1 3 5 0 7 8 1 5 1 4 6 0 0 4 9 1 6 6 9 0
+ [9001] 7 6 1 1 0 1 2 3 4 2 2 3 4 5 6 2 0 1 2 2 8 6 3 9 2 1 9 3 9 6 1 7 2 4 4 5
+ [9037] 7 0 0 1 6 6 8 2 7 7 2 4 2 1 6 1 0 6 9 8 3 9 6 3 0 1 2 3 4 5 6 7 8 9 0 1
+ [9073] 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 1 6 8 9 9 0 1 2 4 4 3 7 4 4 4 0 3 8
+ [9109] 7 5 8 2 1 7 5 3 8 5 2 5 1 1 6 2 1 3 8 6 4 2 6 2 5 5 0 2 8 0 6 8 1 7 9 1
+ [9145] 9 2 6 7 6 6 8 7 4 9 2 1 3 3 0 5 5 8 0 3 7 9 7 0 2 7 9 1 7 8 0 3 5 3 6 0
+ [9181] 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 7 8 9 6 4 2 6 4 7 8 9 2
+ [9217] 9 3 9 3 0 0 1 0 4 2 6 3 5 3 0 3 4 1 5 3 0 8 3 0 6 1 7 8 0 9 2 6 7 1 9 6
+ [9253] 9 4 9 9 6 7 1 2 5 3 7 8 0 1 2 4 5 6 7 8 9 0 1 3 4 5 6 7 8 0 1 3 4 7 8 9
+ [9289] 7 5 5 1 9 9 7 1 0 0 5 9 7 1 7 2 2 3 6 8 3 2 0 0 6 1 7 5 8 6 2 9 4 8 8 7
+ [9325] 1 0 8 7 7 5 8 5 3 4 6 1 1 5 5 0 7 2 3 6 4 1 2 4 1 5 4 2 0 4 8 6 1 9 0 2
+ [9361] 5 6 9 3 6 3 6 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 5 6 7 8 1
+ [9397] 0 9 5 7 5 1 8 6 9 0 4 1 9 3 8 4 4 7 0 1 9 2 8 7 8 2 3 9 6 0 6 5 5 3 3 3
+ [9433] 9 8 1 1 0 6 1 0 0 6 2 1 1 3 2 7 7 8 8 7 8 4 6 0 2 0 7 0 3 6 8 7 1 5 9 9
+ [9469] 3 7 2 4 9 4 3 6 2 2 5 3 2 5 5 9 4 1 7 2 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5
+ [9505] 6 7 8 9 0 1 2 3 4 5 6 7 8 4 1 0 1 2 7 5 3 4 4 0 0 6 9 6 6 5 7 2 3 4 4 9
+ [9541] 1 4 0 7 9 5 7 2 3 1 4 4 0 9 9 6 1 8 3 3 7 3 9 8 8 4 7 7 6 2 1 9 8 7 8 8
+ [9577] 7 2 2 3 9 3 3 5 5 0 7 4 5 6 5 1 4 1 1 2 8 2 6 1 5 0 1 2 3 4 5 6 7 8 9 0
+ [9613] 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 8 0 6 0 1 2 3 7 9 4 7 1 9 1 7 1 4 0
+ [9649] 0 1 7 5 7 1 3 3 3 1 6 9 7 1 3 0 7 6 0 8 9 4 3 5 4 8 1 5 9 0 6 3 3 8 1 4
+ [9685] 7 5 2 0 0 1 7 8 9 6 8 8 2 3 6 1 8 9 5 2 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5
+ [9721] 6 7 8 9 0 1 2 3 4 6 6 7 8 9 7 4 6 1 4 0 9 9 3 7 8 0 7 5 8 5 3 2 2 0 5 8
+ [9757] 6 0 3 8 1 0 3 0 4 7 4 9 0 9 0 7 1 7 1 6 6 5 6 2 8 7 6 4 9 9 5 3 7 4 3 0
+ [9793] 4 6 6 1 1 3 2 1 0 0 1 2 3 4 7 8 4 0 1 2 3 4 5 6 7 8 0 1 2 3 4 7 8 9 0 8
+ [9829] 3 9 5 5 2 6 8 4 1 7 1 7 3 5 6 9 1 1 1 2 1 2 0 7 7 5 8 2 9 8 6 7 3 4 6 8
+ [9865] 7 0 4 2 7 7 5 4 3 4 2 8 1 5 1 0 2 3 3 5 7 0 6 8 6 3 9 9 8 2 7 7 1 0 1 7
+ [9901] 8 9 0 1 2 3 4 5 6 7 8 0 1 2 3 4 7 8 9 7 8 6 4 1 9 3 8 4 4 7 0 1 9 2 8 7
+ [9937] 8 2 6 0 6 5 3 3 8 9 1 4 0 6 1 0 0 6 2 1 1 7 7 8 4 6 0 7 0 3 6 8 7 1 5 2
+ [9973] 4 9 4 3 6 4 1 7 2 6 6 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6
+
