@@ -18,12 +18,13 @@ software components versions and switches.
 
 Now is time to run R and continue with the setup, on the R prompt, type:
 
-devtools::install_github("rstudio/keras")
-library(keras)
+R> devtools::install_github("rstudio/keras")
+
+R> library(keras)
 
 Do not use the default "install_keras()" function, use this:
 
-install_keras(method = c("conda"), conda = "auto", version = "default", tensorflow = "default", extra_packages = c("tensorflow-hub"))
+R> install_keras(method = c("conda"), conda = "auto", version = "default", tensorflow = "default", extra_packages = c("tensorflow-hub"))
 
 When the above script starts, it will take 3 to 4 minutes without any message on the console, then becomes very verbose.
 Expect at least 2 more hours to finish the install (I spent that time on Netflix).
