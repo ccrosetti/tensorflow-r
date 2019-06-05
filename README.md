@@ -1,13 +1,12 @@
 # tensorflow-r
-R Interface to Keras and TensorFlow (CPU, no CUDA). Windows 10 setup - MNIST dataset.
+R interface to Keras and TensorFlow (CPU, no CUDA). Windows 10 setup - MNIST dataset.
 
-I wrote this recipe-repo (avoiding learning Python) to get started with Keras and TensorFlow without CUDA hardware. 
-Now I can follow the RStudio examples to learn Keras and TensorFlow from R.
+I wrote this recipe-repo to get started with Keras and TensorFlow without CUDA hardware. Now I can follow the RStudio examples to learn Keras from R (avoiding learning Python).
 
-Additionally, this repo objective is to document the right steps to setup the R interface to Keras and TensorFlow as described in this page:
+Additionally, the objective is to document the right steps to setup the R interface to Keras and TensorFlow as described in this page:
 https://keras.rstudio.com/
 
-While the setup instructions coming from the above page seems to be very straightforward, you need to pay close attention on how to aligh all software components versions and switches.
+While the setup instructions coming from the above page seems to be very straightforward, you need to pay close attention on how to align all software components, versions and switches.
 
 Prerequisites:
 
@@ -15,9 +14,9 @@ Prerequisites:
 - R version 3.4.4 (64 bits).
 - Anaconda 3.7 IDE installer (64 bits) - takes 45 or more minutes to install.
 - Key switch: when the Anaconda setup wizard asks to modify the PATH - yes, turn it on. 
-- After Anaconda is setup, run cmd, then "python --version" -> 3.7.3, "conda --version" -> 4.6.11 - this is a critical step because R will call those executables that need to be located by the %PaTH% variable.
+- After Anaconda is installed, run cmd, then "python --version" -> 3.7.3, "conda --version" -> 4.6.11 - this is a critical step because R will call those executables that need to be located by the %PATH%.
 
-Now is time to run R and continue with the setup, so, on the R prompt, type:
+Now is time to run R and continue with the install, so, on the R prompt, type:
 
 R> devtools::install_github("rstudio/keras")
 
@@ -27,10 +26,10 @@ Do not use the default "install_keras()" function, use this:
 
 R> install_keras(method = c("conda"), conda = "auto", version = "default", tensorflow = "default", extra_packages = c("tensorflow-hub"))
 
-When the above script starts, it will take 3 to 4 minutes without any message on the console, then becomes very verbose.
+When the above script starts, it will take 3 to 4 minutes without any message sent to the console, aftera while it becomes very verbose.
 Expect at least 2 more hours to finish the install (I spent that time on Netflix).
-You can find the mnist-run.R script and the install+run log as well.
+You can find the mnist-run.R script and the install+run log as well in ths repo.
 
-When the setup is complete, run the mnist-run.R script.
+When the setup is complete, run the mnist-run.R script from R.
 
-Hope this recipe hels you to get started with Keras from R (without learning Python).
+Hope this recipe helps you to learn Keras from R.
