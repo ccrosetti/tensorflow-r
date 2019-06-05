@@ -34,4 +34,4 @@ When the setup is complete, run the mnist-run.R script from R.
 
 Hope this recipe helps you to learn Keras from R.
 
-# carlos dot crosetti at outlook dot com
+(carlos dot crosetti at outlook dot com)
