@@ -33,3 +33,5 @@ You can find the mnist-run.R script and the install+run log as well in ths repo.
 When the setup is complete, run the mnist-run.R script from R.
 
 Hope this recipe helps you to learn Keras from R.
+
+# carlos dot crosetti at outlook dot com
