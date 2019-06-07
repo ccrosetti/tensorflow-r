@@ -1,5 +1,5 @@
 # tensorflow-r
-R interface to Keras and TensorFlow (CPU, no CUDA). Windows 10 setup - MNIST dataset.
+2019 - R interface to Keras and TensorFlow (CPU, no CUDA). Windows 10 setup - MNIST dataset.
 
 I wrote this recipe-repo to get started with Keras and TensorFlow without CUDA hardware. Now I can follow the RStudio examples to learn Keras from R (avoiding learning Python).
 
