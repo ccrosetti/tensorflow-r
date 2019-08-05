@@ -6,7 +6,7 @@ I wrote this recipe to get started with Keras and TensorFlow without CUDA hardwa
 Additionally, the objective is to document the right steps to setup the R interface to Keras and TensorFlow as described in this page:
 https://keras.rstudio.com/
 
-While the setup instructions coming from the above page seems to be very straightforward, you need to pay close attention on how to align all software components, versions and switches.
+While the setup instructions coming from the above page seems to be very straightforward, you need to pay close attention on how to align all software components, versions and configuration switches.
 
 Prerequisites:
 
@@ -27,9 +27,12 @@ Do not use the default "install_keras()" function, use this:
 R> install_keras(method = c("conda"), conda = "auto", version = "default", 
 tensorflow = "default", extra_packages = c("tensorflow-hub"))
 
-When the above script starts, it will take 3 to 4 minutes without any sending any message to the console. After a while it becomes very verbose.
+When the above script starts, it will take 3 to 4 minutes without any sending any message to the console. 
+After a while it becomes very verbose.
 Expect at least 2 more hours to finish the install (I spent that time on Netflix).
+
 You can find the mnist-run.R script and the install+run log as well in ths repo.
+The boston-run.R script is another tested sample included, more to come as soon as I learn more about Keras.
 
 When the setup is complete, run the mnist-run.R script from R to test your environment.
 
