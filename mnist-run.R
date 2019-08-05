@@ -1,8 +1,14 @@
-# MNIST dataset
+# 2019 July - MNIST dataset - R Interface to Keras
+# 8/2/219 -  Added tictocc package to measure data load and model building
+#
+# install.packages("tictoc")
 
 library(keras)
+library(tictoc)
 
+tic("loading data")
 mnist <- dataset_mnist()
+toc()
 
 x_train <- mnist$train$x
  
@@ -13,9 +19,13 @@ x_train <- array_reshape(x_train, c(nrow(x_train), 784))
 x_test <- array_reshape(x_test, c(nrow(x_test), 784))
 x_train <- x_train / 255
 x_test <- x_test / 255
+
 y_train <- to_categorical(y_train, 10)
 y_test <- to_categorical(y_test, 10)
 model <- keras_model_sequential() 
+
+tic("building model")
+
 model %>% 
    layer_dense(units = 256, activation = 'relu', input_shape = c(784)) %>% 
    layer_dropout(rate = 0.4) %>% 
@@ -31,12 +41,14 @@ model %>% compile(
    metrics = c('accuracy') )
 
 history <- model %>% fit(
-  x_train, y_train, 
+   x_train, y_train, 
    epochs = 30, batch_size = 128, 
    validation_split = 0.2)
 
+toc()
+
 plot(history)
+
 model %>% evaluate(x_test, y_test)
 
 model %>% predict_classes(x_test)
-
